@@ -11,6 +11,7 @@ def generateHumanName(characterSeed):
     selection = random.randint(0, len(firstnameList) - 1)
     firstname = firstnameList[selection]
     firstname = firstname.rstrip("\n")
+    firstnameFO.close()
 
     #pick a last name
     lastnameFO = open("lastnameBeginnings.txt")
@@ -26,6 +27,7 @@ def generateHumanName(characterSeed):
     lastname = lastname + lastnameEnding
     name = firstname + " " + lastname
     return name
+    lastnameFO.close()
 
 def getClothing(characterSeed):
     random.seed(characterSeed)
@@ -39,6 +41,7 @@ def getClothing(characterSeed):
     else:
         clothingItem = "a " + clothingItem
     return clothingItem
+    clothesFO.close()
 
 def main():
     print("Adventurer's Guild")
@@ -63,6 +66,9 @@ def main():
     elif characterType == 4:
         print("Type: Fungus")
         print("Name:", "glush")
+    elif characterType == 5:
+        print("Type: Obelisk")
+        print("Name: nameless")
     else:
         print("Type: Robot")
         print("Name:", "233-RLX-2-A")
