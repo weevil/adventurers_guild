@@ -43,6 +43,15 @@ def getClothing(characterSeed):
     return clothingItem
     clothesFO.close()
 
+def getSubstance(characterSeed):
+    random.seed(characterSeed)
+    substanceSO = open("substances.txt")
+    substanceList = list(substanceSO)
+    selection = random.randint(0, len(substanceList) - 1)
+    substance = substanceList[selection]
+    substance = substance.rstrip("\n")
+    return substance
+
 def main():
     print("Adventurer's Guild")
     characterSeed = input("press enter to meet a candidate") #you will eventually be able to secretly enter a seed number to get a particular character
@@ -67,8 +76,11 @@ def main():
         print("Type: Fungus")
         print("Name:", "glush")
     elif characterType == 5:
+        someNumber = random.randint(0, 10000)
+        substance = getSubstance(characterSeed)
         print("Type: Obelisk")
         print("Name: nameless")
+        print("A", str(someNumber), "foot high obelisk made of " + substance + ".")
     else:
         print("Type: Robot")
         print("Name:", "233-RLX-2-A")
