@@ -66,6 +66,15 @@ def getClothing(characterSeed):
     return clothingItem
     clothesFO.close()
 
+def getHair(characterSeed):
+    random.seed(characterSeed)
+    hairSO = open("hair.txt")
+    hairList = list(hairSO)
+    selection = random.randint(0, len(hairList) - 1)
+    hair = hairList[selection]
+    hair = hair.rstrip("\n")
+    return hair
+
 def getSubstance(characterSeed):
     random.seed(characterSeed)
     substanceSO = open("substances.txt")
@@ -77,7 +86,7 @@ def getSubstance(characterSeed):
 
 def main():
     print("Adventurer's Guild")
-    characterSeed = input("press enter to meet a candidate \n") #you will eventually be able to secretly enter a seed number to get a particular character
+    characterSeed = input("press enter to meet a candidate \n") #you can secretly enter a seed number to get a specific character
     if characterSeed == "":
         characterSeed = random.randint(0, 999)
     random.seed(characterSeed)
@@ -86,9 +95,10 @@ def main():
     if characterType == 1:
         humanName = generateHumanName(characterSeed)
         clothingItem = getClothing(characterSeed)
+        hairStyle = getHair(characterSeed)
         print("Type: Human")
         print("Name:", humanName)
-        print("A bilaterally symmetrical mammal with smooth skin and black-colored hair on its head. It is wearing", clothingItem + "." )
+        print("A bilaterally symmetrical mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing", clothingItem + "." )
     elif characterType == 2:
         print("Type: Animal")
         print("Name:", "Fuzzy Wuzzy")
