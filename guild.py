@@ -29,6 +29,26 @@ def generateHumanName(characterSeed):
     return name
     lastnameFO.close()
 
+def generateBirdName(characterSeed):
+    random.seed(characterSeed)
+    #pick a first name
+    firstnameFO = open("birdName.txt")
+    firstnameList = list(firstnameFO)
+    selection = random.randint(0, len(firstnameList) - 1)
+    firstname = firstnameList[selection]
+    firstname = firstname.rstrip("\n")
+    firstnameFO.close()
+
+    #pick a last name
+    lastnameFO = open("birdName.txt")
+    lastnameList = list(lastnameFO)
+    selection = random.randint(0, len(lastnameList) - 1)
+    lastname = lastnameList[selection]
+    lastname = lastname.rstrip("\n")
+    name = firstname + " " + lastname
+    return name
+    lastnameFO.close()
+
 def getClothing(characterSeed):
     random.seed(characterSeed)
     clothesFO = open("clothes.txt")
@@ -54,7 +74,7 @@ def getSubstance(characterSeed):
 
 def main():
     print("Adventurer's Guild")
-    characterSeed = input("press enter to meet a candidate") #you will eventually be able to secretly enter a seed number to get a particular character
+    characterSeed = input("press enter to meet a candidate \n") #you will eventually be able to secretly enter a seed number to get a particular character
     if characterSeed == "":
         characterSeed = random.randint(0, 999)
     random.seed(characterSeed)
@@ -76,6 +96,10 @@ def main():
         print("Type: Fungus")
         print("Name:", "glush")
     elif characterType == 5:
+        birdName = generateBirdName(characterSeed)
+        print("Type: Bird")
+        print("Name:", birdName)
+    elif characterType == 6:
         someNumber = random.randint(0, 10000)
         substance = getSubstance(characterSeed)
         print("Type: Obelisk")
