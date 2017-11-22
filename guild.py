@@ -32,22 +32,25 @@ def generateHumanName(characterSeed):
 def generateBirdName(characterSeed):
     random.seed(characterSeed)
     #pick a first name
-    firstnameFO = open("birdName.txt")
-    firstnameList = list(firstnameFO)
-    selection = random.randint(0, len(firstnameList) - 1)
-    firstname = firstnameList[selection]
-    firstname = firstname.rstrip("\n")
-    firstnameFO.close()
-
-    #pick a last name
-    lastnameFO = open("birdName.txt")
-    lastnameList = list(lastnameFO)
-    selection = random.randint(0, len(lastnameList) - 1)
-    lastname = lastnameList[selection]
-    lastname = lastname.rstrip("\n")
-    name = firstname + " " + lastname
+    nameFO = open("birdName.txt")
+    nameList = list(nameFO)
+    selection = random.randint(0, len(nameList) - 1)
+    name = nameList[selection]
+    name = name.rstrip("\n")
+    nameFO.close()
     return name
-    lastnameFO.close()
+
+def generateRobotName(characterSeed):
+    random.seed(characterSeed)
+    #pick a first name
+    nameFO = open("robotName.txt")
+    nameList = list(nameFO)
+    selection = random.randint(0, len(nameList) - 1)
+    name = nameList[selection]
+    name = name.rstrip("\n")
+    name = name + "-" + str(random.randint(100, 1000))
+    nameFO.close()
+    return name
 
 def getClothing(characterSeed):
     random.seed(characterSeed)
@@ -58,7 +61,7 @@ def getClothing(characterSeed):
     clothingItem = clothingItem.rstrip("\n")
     if clothingItem[-1] != "s" and clothingItem[0] == "a" or clothingItem[0] == "e" or clothingItem[0] == "i" or clothingItem[0] == "o" or clothingItem[0] == "u":
         clothingItem = "an " + clothingItem
-    else:
+    elif clothingItem[-1] != "s":
         clothingItem = "a " + clothingItem
     return clothingItem
     clothesFO.close()
@@ -106,6 +109,7 @@ def main():
         print("Name: nameless")
         print("A", str(someNumber), "foot high obelisk made of " + substance + ".")
     else:
+        robotName = generateRobotName(characterSeed)
         print("Type: Robot")
-        print("Name:", "233-RLX-2-A")
+        print("Name:", robotName)
 main()
