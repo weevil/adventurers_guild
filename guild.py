@@ -2,21 +2,24 @@
 
 #import modules
 import random
+
+#not using the asciimatics stuff yet, but here's the bits we'd need for text-UI
 from asciimatics.widgets import Frame, TextBox, Layout, Label, Divider, Text, \
-    CheckBox, RadioButtons, Button, PopUpDialog
+    Button, PopUpDialog
 from asciimatics.scene import Scene
 from asciimatics.screen import Screen
-from asciimatics.exceptions import ResizeScreenError, NextScene, StopApplication, \
-    InvalidFields
+from asciimatics.exceptions import ResizeScreenError, NextScene, StopApplication
 
-#initial data for the form
+#initial data for the form we will eventually build with asciimatics
 form_data = {
 "name": "Wiley Wiggins",
 "type": "human",
 "description": "A middle-aged, pasty community college student",
 }
 
+#everything is currently in functions because I haven't written any classes yet, that's next.
 
+#here's the functions to make a human
 def generateHumanName(characterSeed):
     random.seed(characterSeed)
     #pick a first name
@@ -75,6 +78,8 @@ def generateHuman(characterSeed):
     print("Name:", humanName)
     print("A bilaterally symmetrical mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing", clothingItem + "." )
 
+#here's the bird functions
+
 def generateBirdName(characterSeed):
     random.seed(characterSeed)
     #pick a first name
@@ -91,6 +96,8 @@ def generateBird(characterSeed):
     print("Type: Bird")
     print("Name:", birdName)
 
+#robot functions
+
 def generateRobotName(characterSeed):
     random.seed(characterSeed)
     #pick a first name
@@ -103,6 +110,13 @@ def generateRobotName(characterSeed):
     nameFO.close()
     return name
 
+def generateRobot(characterSeed):
+    robotName = generateRobotName(characterSeed)
+    print("Type: Robot")
+    print("Name:", robotName)
+
+#substances would probably be shared by multiple character types
+
 def getSubstance(characterSeed):
     random.seed(characterSeed)
     substanceSO = open("substances.txt")
@@ -111,6 +125,8 @@ def getSubstance(characterSeed):
     substance = substanceList[selection]
     substance = substance.rstrip("\n")
     return substance
+
+#obelisk functions
 
 def generateObelisk(characterSeed):
     someNumber = random.randint(0, 10000)
@@ -129,20 +145,19 @@ def main():
     if characterType == 1:
         generateHuman(characterSeed)
     elif characterType == 2:
-        print("Type: Animal")
+        print("Type: Animal") #placeholder for animals
         print("Name:", "Fuzzy Wuzzy")
     elif characterType == 3:
-        print("Type: Vegetable")
+        print("Type: Vegetable") #placeholder for plant people
         print("Name:", "Urm")
     elif characterType == 4:
         print("Type: Fungus")
-        print("Name:", "glush")
+        print("Name:", "glush") #placeholder for fungus beings
     elif characterType == 5:
         generateBird(characterSeed)
     elif characterType == 6:
         generateObelisk(characterSeed)
     else:
-        robotName = generateRobotName(characterSeed)
-        print("Type: Robot")
-        print("Name:", robotName)
+        generateRobot(characterSeed)
+
 main()
