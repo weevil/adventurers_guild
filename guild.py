@@ -2,6 +2,20 @@
 
 #import modules
 import random
+from asciimatics.widgets import Frame, TextBox, Layout, Label, Divider, Text, \
+    CheckBox, RadioButtons, Button, PopUpDialog
+from asciimatics.scene import Scene
+from asciimatics.screen import Screen
+from asciimatics.exceptions import ResizeScreenError, NextScene, StopApplication, \
+    InvalidFields
+
+#initial data for the form
+form_data = {
+"name": "Wiley Wiggins",
+"type": "human",
+"description": "A middle-aged, pasty community college student",
+}
+
 
 def generateHumanName(characterSeed):
     random.seed(characterSeed)
@@ -29,29 +43,6 @@ def generateHumanName(characterSeed):
     return name
     lastnameFO.close()
 
-def generateBirdName(characterSeed):
-    random.seed(characterSeed)
-    #pick a first name
-    nameFO = open("birdName.txt")
-    nameList = list(nameFO)
-    selection = random.randint(0, len(nameList) - 1)
-    name = nameList[selection]
-    name = name.rstrip("\n")
-    nameFO.close()
-    return name
-
-def generateRobotName(characterSeed):
-    random.seed(characterSeed)
-    #pick a first name
-    nameFO = open("robotName.txt")
-    nameList = list(nameFO)
-    selection = random.randint(0, len(nameList) - 1)
-    name = nameList[selection]
-    name = name.rstrip("\n")
-    name = name + "-" + str(random.randint(100, 1000))
-    nameFO.close()
-    return name
-
 def getClothing(characterSeed):
     random.seed(characterSeed)
     clothesFO = open("clothes.txt")
@@ -75,6 +66,43 @@ def getHair(characterSeed):
     hair = hair.rstrip("\n")
     return hair
 
+def generateHuman(characterSeed):
+    humanName = generateHumanName(characterSeed)
+    clothingItem = getClothing(characterSeed)
+    hairStyle = getHair(characterSeed)
+    clothes = getClothing(characterSeed)
+    print("Type: Human")
+    print("Name:", humanName)
+    print("A bilaterally symmetrical mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing", clothingItem + "." )
+
+def generateBirdName(characterSeed):
+    random.seed(characterSeed)
+    #pick a first name
+    nameFO = open("birdName.txt")
+    nameList = list(nameFO)
+    selection = random.randint(0, len(nameList) - 1)
+    name = nameList[selection]
+    name = name.rstrip("\n")
+    nameFO.close()
+    return name
+
+def generateBird(characterSeed):
+    birdName = generateBirdName(characterSeed)
+    print("Type: Bird")
+    print("Name:", birdName)
+
+def generateRobotName(characterSeed):
+    random.seed(characterSeed)
+    #pick a first name
+    nameFO = open("robotName.txt")
+    nameList = list(nameFO)
+    selection = random.randint(0, len(nameList) - 1)
+    name = nameList[selection]
+    name = name.rstrip("\n")
+    name = name + "-" + str(random.randint(100, 1000))
+    nameFO.close()
+    return name
+
 def getSubstance(characterSeed):
     random.seed(characterSeed)
     substanceSO = open("substances.txt")
@@ -84,21 +112,22 @@ def getSubstance(characterSeed):
     substance = substance.rstrip("\n")
     return substance
 
+def generateObelisk(characterSeed):
+    someNumber = random.randint(0, 10000)
+    substance = getSubstance(characterSeed)
+    print("Type: Obelisk")
+    print("Name: nameless")
+    print("A", str(someNumber), "foot high obelisk made of " + substance + ".")
+
 def main():
     print("Adventurer's Guild")
     characterSeed = input("press enter to meet a candidate \n") #you can secretly enter a seed number to get a specific character
     if characterSeed == "":
         characterSeed = random.randint(0, 999)
     random.seed(characterSeed)
-    clothes = getClothing(characterSeed)
     characterType = random.randint(0, 6)
     if characterType == 1:
-        humanName = generateHumanName(characterSeed)
-        clothingItem = getClothing(characterSeed)
-        hairStyle = getHair(characterSeed)
-        print("Type: Human")
-        print("Name:", humanName)
-        print("A bilaterally symmetrical mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing", clothingItem + "." )
+        generateHuman(characterSeed)
     elif characterType == 2:
         print("Type: Animal")
         print("Name:", "Fuzzy Wuzzy")
@@ -109,15 +138,9 @@ def main():
         print("Type: Fungus")
         print("Name:", "glush")
     elif characterType == 5:
-        birdName = generateBirdName(characterSeed)
-        print("Type: Bird")
-        print("Name:", birdName)
+        generateBird(characterSeed)
     elif characterType == 6:
-        someNumber = random.randint(0, 10000)
-        substance = getSubstance(characterSeed)
-        print("Type: Obelisk")
-        print("Name: nameless")
-        print("A", str(someNumber), "foot high obelisk made of " + substance + ".")
+        generateObelisk(characterSeed)
     else:
         robotName = generateRobotName(characterSeed)
         print("Type: Robot")
