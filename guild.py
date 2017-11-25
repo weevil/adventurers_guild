@@ -23,10 +23,10 @@ class Character:
 
     def generateSeed(self):
         characterSeed = input("Press enter to summon an entity: ")
-        if characterSeed == "":
-            characterSeed = random.randint(0, 999)
-        else:
+        if characterSeed.isdigit():
             characterSeed = int(characterSeed)
+        else:
+            characterSeed = random.randint(0, 999)
         self.seed = characterSeed
 
     def generateCharacter(self):
@@ -45,6 +45,9 @@ class Character:
             self.generateObelisk()
         else:
             self.generateRobot()
+
+
+#here's the functions to make a human
 
     def generateHumanName(self):
         random.seed(self.seed)
@@ -76,15 +79,22 @@ class Character:
         random.seed(self.seed)
         clothesFO = open("clothes.txt")
         clothesList = list(clothesFO)
-        selection = random.randint(0, len(clothesList) - 1)
-        clothingItem = clothesList[selection]
+        colorsFO = open("colors.txt")
+        colorsList = list(colorsFO)
+        colorsSelection = random.randint(0, len(colorsList) - 1)
+        color = colorsList[colorsSelection]
+        color = color.rstrip("\n")
+        clothesSelection = random.randint(0, len(clothesList) - 1)
+        clothingItem = clothesList[clothesSelection]
         clothingItem = clothingItem.rstrip("\n")
+        clothingItem = color + " " + clothingItem
         if clothingItem[-1] != "s" and clothingItem[0] == "a" or clothingItem[0] == "e" or clothingItem[0] == "i" or clothingItem[0] == "o" or clothingItem[0] == "u":
             clothingItem = "an " + clothingItem
         elif clothingItem[-1] != "s":
             clothingItem = "a " + clothingItem
         return clothingItem
         clothesFO.close()
+        colorsFO.close()
 
     def getHair(self):
         random.seed(self.seed)
@@ -102,7 +112,24 @@ class Character:
         clothes = self.getClothing()
         self.kind = "Human"
         self.name = humanName
-        self.description = "A bilaterally symmetrical mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing", clothingItem + "."
+        self.description = "A bilaterally symmetrical mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + "."
+
+    # here's the animal functions
+    def generateAnimalName(self):
+        random.seed(self.seed)
+        #pick a first name
+        nameFO = open("firstnames.txt")
+        nameList = list(nameFO)
+        selection = random.randint(0, len(nameList) - 1)
+        name = nameList[selection]
+        name = name.rstrip("\n")
+        nameFO.close()
+        return name
+
+    def generateAnimal(self):
+        animalName = self.generateAnimalName()
+        self.kind = "Animal"
+        self.name = animalName
 
     #here's the bird functions
 
@@ -122,6 +149,40 @@ class Character:
         self.kind = "Bird"
         self.name = birdName
 
+    #veggies
+
+    def generateVegetable(self):
+        random.seed(self.seed)
+        veggieType = random.randint(1,2)
+        colorsFO = open("colors.txt")
+        colorsList = list(colorsFO)
+        colorsSelection = random.randint(0, len(colorsList) - 1)
+        color = colorsList[colorsSelection]
+        color = color.rstrip("\n")
+        if veggieType == 1:
+            pumpkinsFO = open("pumpkins.txt")
+            pumpkinsList = list(pumpkinsFO)
+            selection = random.randint(0, len(pumpkinsList))
+            veggieType = pumpkinsList[selection]
+            veggieType = veggieType.rstrip("\n")
+            pumpkinsFO.close()
+        else:
+            vegetablesFO = open("vegetables.txt")
+            vegetablesList = list(vegetablesFO)
+            selection = random.randint(0, len(vegetablesList))
+            veggieType = vegetablesList[selection]
+            veggieType = veggieType.rstrip("\n")
+            vegetablesFO.close()
+
+        self.name = "nameless"
+        self.kind = "Vegetable"
+        if color[0] == "a" or color[0] == "e" or color[0] == "i" or color[0] == "o" or color[0] == "u":
+            color = "An " + color
+        else:
+            color = "A " + color
+        self.description = color + " " + veggieType + "."
+        colorsFO.close()
+
     #robot functions
 
     def generateRobotName(self):
@@ -140,6 +201,7 @@ class Character:
         robotName = self.generateRobotName()
         self.kind = "Robot"
         self.name = robotName
+        self.description = "A hard working robot."
 
     #fungus functions
 
@@ -156,8 +218,14 @@ class Character:
 
     def generateFungus(self):
         fungiName = self.generateFungiName()
+        nameFO = open("fungiType.txt")
+        nameList = list(nameFO)
+        selection = random.randint(0, len(nameList) - 1)
+        fungiType = nameList[selection]
+        fungiType = fungiType.rstrip("\n")
         self.kind = "Fungus"
         self.name = fungiName
+        self.description = "A colony of clammy, rubbery " + fungiType + "."
 
     #substances would probably be shared by multiple character types
 
@@ -177,9 +245,7 @@ class Character:
         substance = self.getSubstance()
         self.kind = "Obelisk"
         self.name = "nameless"
-        self.description = "A", str(someNumber), "foot high obelisk made of " + substance + "."
-
-#here's the functions to make a human
+        self.description = "A " + str(someNumber) + " foot high obelisk made of " + substance + "."
 
 
 def main():
@@ -187,6 +253,7 @@ def main():
     newCharacter = Character()
     newCharacter.generateSeed()
     newCharacter.generateCharacter()
+    print("\n")
     print("Name:", newCharacter.name)
     print("Kind:", newCharacter.kind)
     print("Description:", newCharacter.description)
