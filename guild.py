@@ -98,8 +98,8 @@ class Character:
 
     def getHair(self):
         random.seed(self.seed)
-        hairSO = open("hair.txt")
-        hairList = list(hairSO)
+        hairFO = open("hair.txt")
+        hairList = list(hairFO)
         selection = random.randint(0, len(hairList) - 1)
         hair = hairList[selection]
         hair = hair.rstrip("\n")
@@ -128,8 +128,18 @@ class Character:
 
     def generateAnimal(self):
         animalName = self.generateAnimalName()
+        animalTypeFO = open("animals.txt")
+        animalList = list(animalTypeFO)
+        selection = random.randint(0, len(animalList) - 1)
+        animalType = animalList[selection]
+        animalType = animalType.rstrip("\n")
+        if animalType[-1] != "s" and animalType[0] == "a" or animalType[0] == "e" or animalType[0] == "i" or animalType[0] == "o" or animalType[0] == "u":
+            animalType = "An " + animalType
+        elif animalType[-1] != "s":
+            animalType = "A " + animalType
         self.kind = "Animal"
         self.name = animalName
+        self.description =  animalType + "."
 
     #here's the bird functions
 
