@@ -1,31 +1,29 @@
 acorn squash
-alfalfa
+alfalfa plant
 artichoke
-arugula
+arugula plant
 asparagus plant
 avocado
 bamboo shoot
-basil
-beans
-beets
+basil plant
+beanstalk
+beet plant
 bell pepper
-black-eyed peas
+black-eyed pea
 broccoli
 Brussels sprout
-capers
 carrot
 cauliflower
-celeriac
-celery
-chard
-chick peas
+celery plant
+chard plant
+chick pea plant
 Chinese cabbage
-chives
-collard greens
-cress
+chive plant
+collard green plant
+cress plant
 cucumber
 daikon
-dandelion greens
+dandelion green
 eggplant
 endive
 fava bean
@@ -34,27 +32,26 @@ garlic
 ginger
 gourd
 greenbean
-greens
-hot chile peppers
+hot chile pepper
 iceberg lettuce
 jicama
 kale
 kohlrabi
 leek
-lentils
+lentil
 lettuce
 Lima bean
 maize
 mung bean
 mushroom
-mustard greens
+mustard green plant
 okra
 olive
 onion
 parsley
 parsnip
 pattypan squash
-pea
+pea plant
 peapod
 peanut
 pickle
@@ -65,8 +62,6 @@ rhubarb
 rocket
 romaine
 rutabaga
-salad
-salsa
 scallion
 seaweed
 shallot

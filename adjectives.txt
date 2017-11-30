@@ -52,6 +52,7 @@ abnormal
               sad
               fun
               bad-intentioned
+              bilaterally symmetrical
               bald
               banal
               barren

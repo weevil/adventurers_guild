@@ -54,15 +54,19 @@ class Character:
         return name
         lastnameFO.close()
 
-    def getClothing(self):
-        random.seed(self.seed)
-        clothesFO = open("clothes.txt")
-        clothesList = list(clothesFO)
+    def getColor(self):
         colorsFO = open("colors.txt")
         colorsList = list(colorsFO)
         colorsSelection = random.randint(0, len(colorsList) - 1)
         color = colorsList[colorsSelection]
         color = color.rstrip("\n")
+        colorsFO.close()
+
+    def getClothing(self):
+        random.seed(self.seed)
+        clothesFO = open("clothes.txt")
+        clothesList = list(clothesFO)
+        color = getColor();
         clothesSelection = random.randint(0, len(clothesList) - 1)
         clothingItem = clothesList[clothesSelection]
         clothingItem = clothingItem.rstrip("\n")
@@ -73,7 +77,6 @@ class Character:
             clothingItem = "a " + clothingItem
         return clothingItem
         clothesFO.close()
-        colorsFO.close()
 
     def getHair(self):
         random.seed(self.seed)
@@ -82,16 +85,30 @@ class Character:
         selection = random.randint(0, len(hairList) - 1)
         hair = hairList[selection]
         hair = hair.rstrip("\n")
+        hairFO.close()
         return hair
+
+    def getCareer(self):
+        random.seed(self.seed)
+        professionFO = open("careers.txt")
+        careerList = list(careerFO)
+        selection = random.randint(0, len(careerList) - 1)
+        career = careerList[selection]
+        career = career.rstrip("\n")
+        careerFO.close()
+        return career
+
 
     def generateHuman(self):
         humanName = self.generateHumanName()
         clothingItem = self.getClothing()
         hairStyle = self.getHair()
         clothes = self.getClothing()
+        adjective = self.getAdjective()
+        career = getCareer()
         self.kind = "Human"
         self.name = humanName
-        self.description = "A bilaterally symmetrical mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + "."
+        self.description = "A " +  adjective + " mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". \n" + humanName + " spends their time working as a " + career + "."
 
     # here's the animal functions
     def generateAnimalName(self):
@@ -112,13 +129,15 @@ class Character:
         selection = random.randint(0, len(animalList) - 1)
         animalType = animalList[selection]
         animalType = animalType.rstrip("\n")
+        adjective = self.getAdjective()
         if animalType[-1] != "s" and animalType[0] == "a" or animalType[0] == "e" or animalType[0] == "i" or animalType[0] == "o" or animalType[0] == "u":
-            animalType = "An " + animalType
+            animalType = "An " + adjective + animalType
         elif animalType[-1] != "s":
-            animalType = "A " + animalType
+            animalType = "A " + adjective + animalType
         self.kind = "Animal"
         self.name = animalName
         self.description =  animalType + "."
+        animalTypeFO.close()
 
     #here's the bird functions
 
@@ -137,6 +156,7 @@ class Character:
         birdName = self.generateBirdName()
         self.kind = "Bird"
         self.name = birdName
+
 
     #veggies
 
@@ -212,20 +232,29 @@ class Character:
         selection = random.randint(0, len(nameList) - 1)
         fungiType = nameList[selection]
         fungiType = fungiType.rstrip("\n")
+        adjective = getAdjective()
+        color = getColor()
         self.kind = "Fungus"
         self.name = fungiName
-        self.description = "A colony of clammy, rubbery " + fungiType + "."
+        self.description = "A colony of " + adjective + color + fungiType + "."
 
     #substances would probably be shared by multiple character types
 
     def getSubstance(self):
         random.seed(self.seed)
-        substanceSO = open("substances.txt")
-        substanceList = list(substanceSO)
+        substanceFO = open("substances.txt")
+        substanceList = list(substanceFO)
         selection = random.randint(0, len(substanceList) - 1)
         substance = substanceList[selection]
         substance = substance.rstrip("\n")
         return substance
+
+    def getAdjective(self):
+        random.seed(self.seed)
+        adjectiveFO = open("adjectives.txt")
+        adjectiveList = list(adjectiveFO)
+        selection = adjectiveList[selection]
+        adjective = adjective.rstrip("\n")
 
     #obelisk functions
 
@@ -235,6 +264,6 @@ class Character:
         self.kind = "Obelisk"
         self.name = "nameless"
         self.description = "A " + str(someNumber) + " foot high obelisk made of " + substance + "."
-        
+
     def __str__(self):
-        return 'Name:' + str(self.name) + '\nKind:' + str(self.kind) + '\nDescription:' + str(self.description)
+        return 'Name: ' + str(self.name) + '\nKind: ' + str(self.kind) + '\nDescription: ' + str(self.description)
