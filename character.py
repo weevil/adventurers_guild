@@ -151,9 +151,9 @@ class Character:
         animalType = animalType.rstrip("\n")
         adjective = self.getAdjective()
         if animalType[-1] != "s" and animalType[0] == "a" or animalType[0] == "e" or animalType[0] == "i" or animalType[0] == "o" or animalType[0] == "u":
-            animalType = "An " + adjective + animalType
+            animalType = "An " + adjective + " " + animalType
         elif animalType[-1] != "s":
-            animalType = "A " + adjective + animalType
+            animalType = "A " + adjective + " " + animalType
         self.kind = "Animal"
         self.name = animalName
         self.description =  animalType + "."
