@@ -25,8 +25,27 @@ class Character:
         else:
             self.generateRobot()
 
+    #substances and adjectives would probably be shared by multiple character types
 
-#here's the functions to make a human
+    def getSubstance(self):
+        random.seed(self.seed)
+        substanceFO = open("substances.txt")
+        substanceList = list(substanceFO)
+        selection = random.randint(0, len(substanceList) - 1)
+        substance = substanceList[selection]
+        substance = substance.rstrip("\n")
+        return substance
+
+    def getAdjective(self):
+        random.seed(self.seed)
+        adjectiveFO = open("adjectives.txt")
+        adjectiveList = list(adjectiveFO)
+        selection = random.randint(0, len(adjectiveList) - 1)
+        adjective = adjectiveList[selection]
+        adjective = adjective.rstrip("\n")
+        return adjective
+
+    #here's the functions to make a human
 
     def generateHumanName(self):
         random.seed(self.seed)
@@ -55,6 +74,7 @@ class Character:
         lastnameFO.close()
 
     def getColor(self):
+        random.seed(self.seed)
         colorsFO = open("colors.txt")
         colorsList = list(colorsFO)
         colorsSelection = random.randint(0, len(colorsList) - 1)
@@ -232,29 +252,13 @@ class Character:
         selection = random.randint(0, len(nameList) - 1)
         fungiType = nameList[selection]
         fungiType = fungiType.rstrip("\n")
-        adjective = getAdjective()
-        color = getColor()
+        adjective = self.getAdjective()
+        color = self.getColor()
         self.kind = "Fungus"
         self.name = fungiName
         self.description = "A colony of " + adjective + color + fungiType + "."
 
-    #substances would probably be shared by multiple character types
 
-    def getSubstance(self):
-        random.seed(self.seed)
-        substanceFO = open("substances.txt")
-        substanceList = list(substanceFO)
-        selection = random.randint(0, len(substanceList) - 1)
-        substance = substanceList[selection]
-        substance = substance.rstrip("\n")
-        return substance
-
-    def getAdjective(self):
-        random.seed(self.seed)
-        adjectiveFO = open("adjectives.txt")
-        adjectiveList = list(adjectiveFO)
-        selection = adjectiveList[selection]
-        adjective = adjective.rstrip("\n")
 
     #obelisk functions
 
