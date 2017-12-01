@@ -150,9 +150,9 @@ class Character:
         animalType = animalList[selection]
         animalType = animalType.rstrip("\n")
         adjective = self.getAdjective()
-        if animalType[-1] != "s" and animalType[0] == "a" or animalType[0] == "e" or animalType[0] == "i" or animalType[0] == "o" or animalType[0] == "u":
+        if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
             animalType = "An " + adjective + " " + animalType
-        elif animalType[-1] != "s":
+        else:
             animalType = "A " + adjective + " " + animalType
         self.kind = "Animal"
         self.name = animalName
