@@ -1,4 +1,5 @@
 import random
+import markovify
 
 class Character:
     def __init__(self):
@@ -161,7 +162,7 @@ class Character:
 
     #here's the bird functions
 
-    def generateBirdName(self):
+    def getBirdName(self):
         random.seed(self.seed)
         #pick a first name
         nameFO = open("birdName.txt")
@@ -172,10 +173,22 @@ class Character:
         nameFO.close()
         return name
 
+    def generateBirdDescription(self):
+        birdDescription = ""
+        birdCorpusFO = open(bird_corpus.txt)
+        text = birdCorpusFO.read()
+        text_model = markovify.Text(text)
+        for i in range(4):
+            birdDescription += text_model.make_sentence()
+        return birdDescription
+
+
     def generateBird(self):
-        birdName = self.generateBirdName()
+        name = self.getBirdName()
+        description = self.generateBirdDescription()
         self.kind = "Bird"
-        self.name = birdName
+        self.name = name
+        self.description = description
 
 
     #veggies
@@ -191,7 +204,7 @@ class Character:
         if veggieType == 1:
             pumpkinsFO = open("pumpkins.txt")
             pumpkinsList = list(pumpkinsFO)
-            selection = random.randint(0, len(pumpkinsList))
+            selection = random.randint(0, len(pumpkinsList) -1)
             veggieType = pumpkinsList[selection]
             veggieType = veggieType.rstrip("\n")
             pumpkinsFO.close()

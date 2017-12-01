@@ -79,7 +79,7 @@ anesthesiologist (md)
 animal breeder
 animal control worker
 animal husbandry worker supervisor
-animal keepers and groomers
+animal keeper and groomer
 animal kennel supervisor
 animal scientist
 animal trainer
@@ -115,10 +115,10 @@ automotive body repairer
 automotive engineer
 automotive glass installer
 avionics technician
-baggage porters and bellhops
+baggage porter and bellhop
 baker (commercial)
 ballistics expert
-bank and branch managers
+bank and branch manager
 bank examiner
 bank teller
 benefits manager
@@ -144,7 +144,7 @@ budget analyst
 building inspector
 building maintenance mechanic
 bulldozer / grader operator
-bus and truck mechanics
+bus and truck mechanic
 bus boy / bus girl
 bus driver (school)
 bus driver (transit)
@@ -156,12 +156,12 @@ caption writer
 cardiologist (md)
 cardiopulmonary technologist
 career counselor
-cargo and freight agents
+cargo and freight agent
 carpenter's assistant
 carpet installer
-cartographer (map scientist)
+cartographer
 cartographic technician
-cartoonist (publications)
+cartoonist
 casino cage worker
 casino cashier
 casino dealer
