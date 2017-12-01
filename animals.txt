@@ -1,5 +1,4 @@
 aardvark
-albatross
 ale
 alligator
 alpaca
@@ -28,29 +27,20 @@ bee
 beer
 beetle
 bigfoot
-birdie
 bison
-blackbird
-blue jay
-bluebird
 bluebottle
-bluejay
 boa
 boa constrictor
 boar
 bobcat
 bottle
-bowerbird
 brontosaurus
 budgerigar
-budgie
 buffalo
-bullfinch
 bullfrog
 bumblebee
 bushbaby
 butterfly
-buzzard
 camel
 canary
 canine
@@ -59,7 +49,6 @@ capybara
 carbuncle
 caribou
 carp
-cassowary
 cat
 caterpillar
 catfish
@@ -69,8 +58,6 @@ cephalopod
 chameleon
 chamois
 cheetah
-chickadee
-chicken
 chimp
 chimpanzee
 chinchilla
@@ -82,8 +69,7 @@ cobra
 cockerel
 cockroach
 cod
-condor
-coon
+raccoon
 cormorant
 cottontail
 cougar
@@ -115,12 +101,10 @@ dotterel
 dove
 dragonfly
 dromedary
-duck
 duckbill platypus
 duckling
 dugong
 dunlin
-dwarf
 eagle
 earwig
 echidna
@@ -136,7 +120,6 @@ falcon
 fauna
 feline
 ferret
-finch
 fink
 firefly
 fish
@@ -175,18 +158,14 @@ grasshopper
 gremlin
 grizzly
 groundhog
-grouse
 guanaco
-guinea fowl
 guinea pig
 gull
 hagfish
 hammerhead shark
 hamster
 hare
-hawk
 hedgehog
-heron
 herring
 hippo
 hippopotamus
@@ -198,13 +177,9 @@ horse
 horsefly
 horsey
 housefly
-human
-hummingbird
 humpback whale
 humpbacked whale
 hyena
-ibex
-ibis
 iguana
 insect
 jackal
@@ -212,7 +187,6 @@ jackdaw
 jackrabbit
 jaguar
 jaguarundi
-jay
 jellyfish
 kangaroo
 kingfisher
@@ -220,15 +194,11 @@ kipper
 kitten
 koala
 komodo dragon
-kookabura
-kookaburra
 kouprey
 kudu
-ladybird
 ladybug
 lamprey
 lapwing
-lark
 lemur
 leopard
 liger
@@ -242,27 +212,19 @@ locust
 loon
 loris
 louse
-lovebird
 lungfish
 lyrebird
-macaque
-magpie
-mallard
-mallard duck
 manatee
 mandrill
 mantis
 marmoset
 marmot
 marsupial
-marten
-martian
 mayfly
 mealworm
 meerkat
 millipede
 mink
-mockingbird
 mole
 mollusc
 mollusk
@@ -281,7 +243,6 @@ narwhal
 needlefish
 nematode
 newt
-nightingale
 oarfish
 ocelot
 octopus
@@ -289,31 +250,17 @@ okapi
 opossum
 oppossum
 orangutan
-oryx
-osprey
-ostrich
 otter
-owl
 oyster
 pachyderm
 paddlefish
 panda
 panther
-parakeet
 paramecium
 parasite
 parrot
 parrotfish
-partridge
-peacock
-peafowl
-peccary
-pelican
-penguin
-pet
-pheasant
 pig
-pigeon
 piglet
 piranha
 platypus
@@ -326,18 +273,11 @@ porker
 porpoise
 prairie dog
 praying mantis
-predator
-primate
-pterodactyl
-puffin
 pup
 puppy
 python
 quagga
-quail
-quetzal
 rabbit
-raccoon
 rail
 ram
 rat
@@ -351,10 +291,7 @@ reptile
 rhino
 rhinoceros
 ringtail
-robin
 rodent
-rook
-rooster
 roundworm
 salamander
 salmon
@@ -367,8 +304,6 @@ scotch
 sea anemone
 sea lion
 sea urchin
-seabird
-seagull
 seahorse
 seal
 sealion
@@ -381,23 +316,17 @@ skink
 skunk
 snail
 snake
-songbird
-sorceress
-sparrow
 spider
 spoonbill
 squid
 squirrel
 starfish
-starling
 stingray
 stinkbug
 stoat
 stork
 sturgeon
 succubus
-swallow
-swan
 tadpole
 tamarin
 tapeworm
@@ -411,13 +340,11 @@ tiger
 titmouse
 toad
 tortoise
-toucan
 trapper
 triceratops
 triffid
 trout
 tuna
-turkey
 turtle
 tyrannosaurus rex
 viper
@@ -425,7 +352,6 @@ vole
 vulture
 wallaby
 walrus
-warbler
 warthog
 wasp
 water buffalo
@@ -439,12 +365,8 @@ wolf
 wolverine
 wombat
 woodchuck
-woodcock
 woodlouse
-woodpecker
 worm
-wren
-xenopus
 yak
 yeti
 zebra

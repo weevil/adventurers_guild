@@ -131,7 +131,7 @@ class Character:
         career = self.getCareer()
         self.kind = "Human"
         self.name = humanName
-        self.description = "A " +  adjective + " mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " spends their time working as a " + career + "."
+        self.description = "A " +  adjective + " mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " works as a " + career + "."
 
     # here's the animal functions
     def getAnimalName(self):
@@ -161,6 +161,7 @@ class Character:
         self.kind = "Animal"
         self.name = animalName
         self.description =  animalType + "."
+        return animalType
         animalTypeFO.close()
 
     #here's the bird functions
@@ -184,7 +185,19 @@ class Character:
         text_model = markovify.Text(text)
         for i in range(4):
             birdDescription += text_model.make_sentence() + " "
+        birdCorpusFO.close()
         return birdDescription
+
+    def generateVegetableDescription(self):
+        random.seed(self.seed)
+        vegetableDescription = ""
+        veggieCorpusFO = open("veggie_corpus.txt")
+        text = veggieCorpusFO.read()
+        text_model = markovify.Text(text)
+        for i in range(2):
+            vegetableDescription += text_model.make_sentence() + " "
+        veggieCorpusFO.close()
+        return vegetableDescription
 
 
     def generateBird(self):
@@ -192,9 +205,11 @@ class Character:
         name = self.getBirdName()
         enemyname = self.getAnimalName()
         enemyType = self.generateAnimal()
-        adjective = self.getAdjective
+        adjective = self.getAdjective()
+        if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
+            adjective = "an " + adjective
         description = self.generateBirdDescription()
-        description += name + " the bird is hunted through life by its enemy, " + enemyname +", a " + adjective + " " + enemyType +"."
+        description = description + " " + name + " the bird is hunted through life by its enemy, " + enemyname +", " + adjective + " " + enemyType +"."
         self.kind = "Bird"
         self.name = name
         self.description = description
@@ -206,6 +221,7 @@ class Character:
         random.seed(self.seed)
         veggieType = random.randint(1,2)
         color = self.getColor()
+        vegetableDescription = self.generateVegetableDescription()
         if veggieType == 1:
             pumpkinsFO = open("pumpkins.txt")
             pumpkinsList = list(pumpkinsFO)
@@ -227,11 +243,11 @@ class Character:
             color = "An " + color
         else:
             color = "A " + color
-        self.description = color + " " + veggieType + "."
+        self.description = color + " " + veggieType + ". " + vegetableDescription
 
     #robot functions
 
-    def generateRobotName(self):
+    def getRobotName(self):
         random.seed(self.seed)
         #pick a first name
         nameFO = open("robotName.txt")
@@ -243,11 +259,24 @@ class Character:
         nameFO.close()
         return name
 
+    def generateRobotDescription(self):
+        random.seed(self.seed)
+        robotDescription = ""
+        robotCorpusFO = open("robot_corpus.txt")
+        text = robotCorpusFO.read()
+        text_model = markovify.Text(text)
+        for i in range(4):
+            robotDescription += text_model.make_sentence() + " "
+        robotCorpusFO.close()
+        return robotDescription
+
+
     def generateRobot(self):
-        robotName = self.generateRobotName()
+        name = self.getRobotName()
+        description = self.generateRobotDescription()
         self.kind = "Robot"
-        self.name = robotName
-        self.description = "A hard working robot."
+        self.name = name
+        self.description = "A hard working robot." + " " + description
 
     #fungus functions
 
@@ -273,13 +302,14 @@ class Character:
         color = self.getColor()
         self.kind = "Fungus"
         self.name = fungiName
-        self.description = "A colony of " + adjective + color + fungiType + "."
+        self.description = "A colony of " + adjective + ", " + color + " " + fungiType + "."
 
 
 
     #obelisk functions
 
     def generateObelisk(self):
+        random.seed(self.seed)
         someNumber = random.randint(0, 10000)
         substance = self.getSubstance()
         self.kind = "Obelisk"

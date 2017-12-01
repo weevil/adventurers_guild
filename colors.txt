@@ -70,22 +70,20 @@ violet-red
 wheat
 white
 yellow
-yellow green
+yellow-green
 black
 brown
-burly wood
 camouflage
 dark gray
-dark slate gray
+dark slate-gray
 dark turquoise
 dark violet
 dim gray
-dodger blue
 gray
 grey
-light slate gray
+light slate-gray
 matte black
 midnight blue
 navy
-navy blue
-slate gray
+navy-blue
+slate-gray
