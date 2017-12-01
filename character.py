@@ -145,24 +145,42 @@ class Character:
         nameFO.close()
         return name
 
-    def generateAnimal(self):
+    def generateAnimalDescription(self):
+        animalDescription = " "
         random.seed(self.seed)
-        animalName = self.getAnimalName()
+        animalCorpusFO = open("animal_corpus.txt")
+        text = animalCorpusFO.read()
+        text_model = markovify.Text(text)
+        for i in range(4):
+            try:
+                animalDescription += text_model.make_sentence() + " "
+            except TypeError:
+                animalDescription += "It hunts daily for food."
+        animalCorpusFO.close()
+        return animalDescription
+
+    def getAnimalType(self):
         animalTypeFO = open("animals.txt")
         animalList = list(animalTypeFO)
         selection = random.randint(0, len(animalList) - 1)
         animalType = animalList[selection]
         animalType = animalType.rstrip("\n")
+        return animalType
+        animalTypeFO.close()
+
+    def generateAnimal(self):
+        random.seed(self.seed)
+        animalName = self.getAnimalName()
+        animalType = self.getAnimalType()
         adjective = self.getAdjective()
+        description = self.generateAnimalDescription()
         if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
             animalType = "An " + adjective + " " + animalType
         else:
             animalType = "A " + adjective + " " + animalType
         self.kind = "Animal"
         self.name = animalName
-        self.description =  animalType + "."
-        return animalType
-        animalTypeFO.close()
+        self.description =  animalType + ". " + description
 
     #here's the bird functions
 
@@ -179,35 +197,28 @@ class Character:
 
     def generateBirdDescription(self):
         random.seed(self.seed)
-        birdDescription = ""
+        birdDescription = " "
         birdCorpusFO = open("bird_corpus.txt")
         text = birdCorpusFO.read()
         text_model = markovify.Text(text)
         for i in range(4):
-            birdDescription += text_model.make_sentence() + " "
+            try:
+                birdDescription += text_model.make_sentence() + " "
+            except TypeError:
+                birdDescription += "It enjoys flying."
         birdCorpusFO.close()
         return birdDescription
-
-    def generateVegetableDescription(self):
-        random.seed(self.seed)
-        vegetableDescription = ""
-        veggieCorpusFO = open("veggie_corpus.txt")
-        text = veggieCorpusFO.read()
-        text_model = markovify.Text(text)
-        for i in range(2):
-            vegetableDescription += text_model.make_sentence() + " "
-        veggieCorpusFO.close()
-        return vegetableDescription
-
 
     def generateBird(self):
         random.seed(self.seed)
         name = self.getBirdName()
         enemyname = self.getAnimalName()
-        enemyType = self.generateAnimal()
+        enemyType = self.getAnimalType()
         adjective = self.getAdjective()
         if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
             adjective = "an " + adjective
+        else:
+            adjective = "a " + adjective
         description = self.generateBirdDescription()
         description = description + " " + name + " the bird is hunted through life by its enemy, " + enemyname +", " + adjective + " " + enemyType +"."
         self.kind = "Bird"
@@ -216,6 +227,19 @@ class Character:
 
 
     #veggies
+    def generateVegetableDescription(self):
+        random.seed(self.seed)
+        vegetableDescription = " "
+        veggieCorpusFO = open("veggie_corpus.txt")
+        text = veggieCorpusFO.read()
+        text_model = markovify.Text(text)
+        for i in range(2):
+            try:
+                vegetableDescription += text_model.make_sentence() + " "
+            except TypeError:
+                vegetableDescription += " All vegetables should be presumed poisonous."
+        veggieCorpusFO.close()
+        return vegetableDescription
 
     def generateVegetable(self):
         random.seed(self.seed)
@@ -261,12 +285,15 @@ class Character:
 
     def generateRobotDescription(self):
         random.seed(self.seed)
-        robotDescription = ""
+        robotDescription = " "
         robotCorpusFO = open("robot_corpus.txt")
         text = robotCorpusFO.read()
         text_model = markovify.Text(text)
         for i in range(4):
-            robotDescription += text_model.make_sentence() + " "
+            try:
+                robotDescription += text_model.make_sentence() + " "
+            except TypeError:
+                robotDescription += "Robots never complain."
         robotCorpusFO.close()
         return robotDescription
 

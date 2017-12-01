@@ -43,7 +43,6 @@ lettuce
 Lima bean
 maize
 mung bean
-mushroom
 mustard green plant
 okra
 olive
