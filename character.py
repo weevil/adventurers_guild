@@ -82,12 +82,13 @@ class Character:
         color = colorsList[colorsSelection]
         color = color.rstrip("\n")
         colorsFO.close()
+        return color
 
     def getClothing(self):
         random.seed(self.seed)
         clothesFO = open("clothes.txt")
         clothesList = list(clothesFO)
-        color = getColor();
+        color = self.getColor();
         clothesSelection = random.randint(0, len(clothesList) - 1)
         clothingItem = clothesList[clothesSelection]
         clothingItem = clothingItem.rstrip("\n")
@@ -111,7 +112,7 @@ class Character:
 
     def getCareer(self):
         random.seed(self.seed)
-        professionFO = open("careers.txt")
+        careerFO = open("careers.txt")
         careerList = list(careerFO)
         selection = random.randint(0, len(careerList) - 1)
         career = careerList[selection]
@@ -121,18 +122,19 @@ class Character:
 
 
     def generateHuman(self):
+        random.seed(self.seed)
         humanName = self.generateHumanName()
         clothingItem = self.getClothing()
         hairStyle = self.getHair()
         clothes = self.getClothing()
         adjective = self.getAdjective()
-        career = getCareer()
+        career = self.getCareer()
         self.kind = "Human"
         self.name = humanName
-        self.description = "A " +  adjective + " mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". \n" + humanName + " spends their time working as a " + career + "."
+        self.description = "A " +  adjective + " mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " spends their time working as a " + career + "."
 
     # here's the animal functions
-    def generateAnimalName(self):
+    def getAnimalName(self):
         random.seed(self.seed)
         #pick a first name
         nameFO = open("firstnames.txt")
@@ -144,7 +146,8 @@ class Character:
         return name
 
     def generateAnimal(self):
-        animalName = self.generateAnimalName()
+        random.seed(self.seed)
+        animalName = self.getAnimalName()
         animalTypeFO = open("animals.txt")
         animalList = list(animalTypeFO)
         selection = random.randint(0, len(animalList) - 1)
@@ -174,18 +177,24 @@ class Character:
         return name
 
     def generateBirdDescription(self):
+        random.seed(self.seed)
         birdDescription = ""
-        birdCorpusFO = open(bird_corpus.txt)
+        birdCorpusFO = open("bird_corpus.txt")
         text = birdCorpusFO.read()
         text_model = markovify.Text(text)
         for i in range(4):
-            birdDescription += text_model.make_sentence()
+            birdDescription += text_model.make_sentence() + " "
         return birdDescription
 
 
     def generateBird(self):
+        random.seed(self.seed)
         name = self.getBirdName()
+        enemyname = self.getAnimalName()
+        enemyType = self.generateAnimal()
+        adjective = self.getAdjective
         description = self.generateBirdDescription()
+        description += name + " the bird is hunted through life by its enemy, " + enemyname +", a " + adjective + " " + enemyType +"."
         self.kind = "Bird"
         self.name = name
         self.description = description
@@ -196,11 +205,7 @@ class Character:
     def generateVegetable(self):
         random.seed(self.seed)
         veggieType = random.randint(1,2)
-        colorsFO = open("colors.txt")
-        colorsList = list(colorsFO)
-        colorsSelection = random.randint(0, len(colorsList) - 1)
-        color = colorsList[colorsSelection]
-        color = color.rstrip("\n")
+        color = self.getColor()
         if veggieType == 1:
             pumpkinsFO = open("pumpkins.txt")
             pumpkinsList = list(pumpkinsFO)
@@ -223,7 +228,6 @@ class Character:
         else:
             color = "A " + color
         self.description = color + " " + veggieType + "."
-        colorsFO.close()
 
     #robot functions
 
