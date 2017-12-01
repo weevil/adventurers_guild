@@ -134,7 +134,7 @@ boat builder
 book editor
 border patrol agent
 brattice builder
-bridge and lock tenders
+bridge and lock tender
 broadcast news analyst
 broadcast technician
 broker's floor representative
@@ -145,7 +145,6 @@ building inspector
 building maintenance mechanic
 bulldozer / grader operator
 bus and truck mechanic
-bus boy / bus girl
 bus driver (school)
 bus driver (transit)
 business professor
@@ -180,7 +179,7 @@ chaplain (prison, military, hospital)
 chemical engineer
 chemical equipment operator
 chemical plant operator
-chemical technicians
+chemical technician
 chemistry professor
 chief financial officer
 child care center administrator
@@ -196,7 +195,7 @@ clergy member (religious leader)
 clinical dietitian
 clinical psychologist
 clinical sociologist
-coatroom and dressing room attendants
+coatroom and dressing room attendant
 college/university professor
 commercial designer
 commercial diver
@@ -211,16 +210,16 @@ compensation specialist
 compliance officer
 computer aided design (cad) technician
 computer and information scientists, research
-computer and information systems managers
+computer and information systems manager
 computer applications engineer
-computer controlled machine tool operators
+computer controlled machine tool operator
 computer customer support specialist
 computer hardware technician
-computer operators
+computer operator
 computer programmer
 computer science professor
 computer security specialist
-computer software engineers
+computer software engineer
 computer software technician
 computer systems engineer
 congressional aide
@@ -248,9 +247,9 @@ cost analysis engineer
 cost estimator
 costume attendant
 counseling psychologist
-counter and rental clerks
+counter and rental clerk
 county or city auditor
-couriers and messengers
+couriers and messenger
 court administrator
 court clerk
 court reporter
@@ -268,12 +267,12 @@ custom tailor
 customer service representative (utilities)
 customer service supervisor
 customs inspector
-cutting machine operators
+cutting machine operator
 dairy technologist
 database administrator
 deaf students teacher
 delivery driver
-demonstrators and product promoters
+demonstrators and product promoter
 dental / orthodontic office administrator
 dental assistant
 dental hygienist
@@ -292,7 +291,7 @@ dispatcher (safety vehicles)
 door to door salesmen
 dry wall installer
 economics professor
-editorial writer, newspapers & magazines
+editorial writer, newspapers & magazine
 education and training administrator
 education professor
 educational administrator
@@ -304,10 +303,10 @@ electric meter installer
 electric motor mechanic
 electrical and electronic inspector
 electrical drafter
-electrical engineers
+electrical engineer
 electrical parts reconditioner
 electrical technician
-electro-mechanical technicians
+electro-mechanical technician
 electromechanical equipment assembler
 electronic drafter
 electronics engineer
@@ -322,8 +321,8 @@ employee training instructor
 employment administrator
 employment and placement specialist
 employment interviewer
-engine and machine assemblers
-engineering managers
+engine and machine assembler
+engineering manager
 engineering professor
 english language and literature professor
 environmental compliance inspector
@@ -335,7 +334,7 @@ environmental science technician
 environmental science professsor
 environmental technician
 equal opportunity representative
-etchers and engravers
+etchers and engraver
 excavating machine operator
 excavating supervisor
 executive secretary
@@ -345,7 +344,7 @@ exhibit designer
 experimental psychologist
 explosives worker
 export agent
-fabric and apparel patternmakers
+fabric and apparel patternmaker
 facilities planner
 factory layout engineer
 family caseworker
@@ -355,7 +354,8 @@ farm hand
 farm labor contractor
 farm manager
 farm products purchasing agent
-farmers and ranchers
+farmer
+rancher
 fashion artist
 fashion coordinator
 fashion designer
@@ -382,12 +382,12 @@ fish & game warden
 fish hatchery specialist
 fishery worker supervisor
 fitness trainer
-flight engineers
+flight engineer
 floral designer
 food & drug inspector
 food batchmaker
 food preparation worker
-food science technicians
+food science technician
 food technologist
 foreign exchange trader
 foreign language interpreter
@@ -396,7 +396,7 @@ foreign language translator
 foreign service officer
 foreign service peacekeeping specialist
 foreign student adviser
-forensic science technicians
+forensic science technician
 forensics psychologist
 forest and conservation technician
 forest engineer
@@ -404,7 +404,7 @@ forest fire prevention supervisor
 forest fire inspector
 forestry and conservation professor
 forging machine operator
-forklift and industrial truck operators
+forklift and industrial truck operator
 fraud investigator
 freight and stock handler
 fund raiser
@@ -412,21 +412,21 @@ funds development administrator
 funeral attendant
 funeral director
 furniture designer
-furniture finishers
+furniture finisher
 game runner
 gas plant operator
-general and operations managers
-general farmworkers
+general and operations manager
+general farmworker
 general internists (md)
 geography professor
-geological data technicians
+geological data technician
 geological technician (drafter)
 glass blower
-gluing machine operators
+gluing machine operator
 golf course superintendent
 government budget analyst
-government property inspectors
-government service executives
+government property inspector
+government service executive
 graduate teaching assistant
 graphic designer
 greenhouse and nursery manager
@@ -440,7 +440,7 @@ hazardous materials removal worker
 hazardous waste management analyst
 health care facilities inspector
 health case manager
-health educators
+health educator
 health psychologist
 hearing officer
 heating, a/c, refrigeration technician
@@ -465,11 +465,11 @@ horticulture therapist
 horticulturist (vineyard)
 hospital administrator
 hospital nurse
-hosts and hostesses
-hotel and motel desk clerks
+hosts and hostesse
+hotel and motel desk clerk
 hotel convention/events coordinator
 hotel manager
-housekeeping supervisors
+housekeeping supervisor
 human factors psychologist
 human resources management advisor
 human resources management consultant
@@ -482,15 +482,15 @@ industrial engineer
 industrial engineering technician
 industrial health engineer
 industrial hygienist
-industrial machinery mechanics
+industrial machinery mechanic
 industrial relations analyst
 industrial relations specialist
 industrial therapist
 industrial waste inspector
 industrial-organizational psychologist
-infantry officers
-instructional coordinators
-instructor, police-canine services
+infantry officer
+instructional coordinator
+instructor, police-canine service
 instrument technician
 insulation installer
 insurance adjuster
@@ -498,7 +498,7 @@ insurance agent
 insurance appraiser (auto damage)
 insurance claim examiner
 insurance claims adjuster
-insurance claims clerks
+insurance claims clerk
 insurance estate planner
 insurance lawyer
 insurance policy processing clerk
@@ -507,10 +507,10 @@ intelligence specialist (government)
 interior designer
 internal auditor
 interpreter for the hearing impaired
-irradiated-fuel handlers
+irradiated-fuel handler
 irrigation engineer
 it administrator (information technology)
-janitorial supervisors
+janitorial supervisor
 job analyst
 job development specialist
 job printer (graphic arts)
@@ -520,7 +520,7 @@ laboratory tester	land surveyor
 landscape architect
 landscape contractor
 lathe operator
-law clerks
+law clerk
 law professor
 legal assistant
 legal secretary
@@ -533,19 +533,19 @@ license clerk
 licensed practical nurse (lpn)
 livestock commission agent
 loan counselor
-loan interviewers and clerks
+loan interviewers and clerk
 loan officer
-locomotive engineers
-log graders and scalers
+locomotive engineer
+log graders and scaler
 logging tractor operator
 logging worker supervisor
-machine feeders and offbearers
+machine feeders and offbearer
 mail clerk
-mail machine operators
+mail machine operator
 maintenance supervisor
 makeup artists - theatrical
 management consultant (analyst)
-manicurists and pedicurists
+manicurists and pedicurist
 manual arts therapist
 mapping technician
 marina boat charter administrator
@@ -557,23 +557,23 @@ marine engineer
 marine surveyor
 marine/port engineer
 market research analyst
-marketing managers
+marketing manager
 marking clerk
-marriage and family therapists
+marriage and family therapist
 massage therapist
 materials engineer
 materials inspector
 materials scientist
 math professor
 mathematical technician
-meat packers
-meat, poultry, and fish trimmers
+meat packer
+meat, poultry, and fish trimmer
 mechanical drafter
 mechanical engineer
 mechanical engineering technician
 mechanical inspector
 medical administrative assistant
-medical and public health social workers
+medical and public health social worker
 medical and scientific illustrator
 medical appliance technician
 medical assistant
@@ -616,8 +616,8 @@ motorboat mechanic
 motorcycle mechanic
 municipal fire fighting supervisor
 museum curator
-museum technicians and conservators
-music arrangers and orchestrators
+museum technicians and conservator
+music arrangers and orchestrator
 music director
 music teacher
 music therapist
@@ -633,11 +633,11 @@ nuclear fuels research engineer
 nuclear medicine technologist
 nuclear monitoring technician
 nuclear power reactor operator
-nuclear technicians
+nuclear technician
 numerical tool programmer
 nurse practitioner
 nurse's aide
-nursery workers
+nursery worker
 nursing professor
 obstetrician (md)
 occupational analyst
@@ -649,14 +649,14 @@ oceanographic assistant
 office clerk
 office machine mechanic
 office supervisor
-offset press operators
-operating engineers
+offset press operator
+operating engineer
 operations management analyst
 ophthalmic laboratory technician
 ophthalmologist (md)
-oral and maxillofacial surgeons
+oral and maxillofacial surgeon
 order clerk
-order fillers, wholesale and retail sales
+order fillers, wholesale and retail sale
 ordinary seamen
 ornamental-metalwork designer
 orthodontic assistant
@@ -679,7 +679,7 @@ paste-up worker (graphic arts)
 patent agent
 patent lawyer
 pathologist (md)
-payroll and timekeeping clerks
+payroll and timekeeping clerk
 pbx installer and repairer
 peace corps worker (volunteer)
 pediatric dentist
@@ -688,24 +688,24 @@ personal service supervisor
 personnel administrator
 personnel assistant
 personnel recruiter
-pest control workers
-pesticide handlers
+pest control worker
+pesticide handler
 petroleum engineer
 petroleum geologist
 petroleum laboratory assistant
 petroleum refinery operator
 petroleum technician
-pharmacy aides
+pharmacy aide
 pharmacy technician
 philosophy and religion professor
 photo-optics technician
 photoengravers (graphic arts)
 photogrammetric engineer
 photographic equipment mechanic
-photographic process workers
+photographic process worker
 physical education instructor
 physical therapist
-physical therapist aides
+physical therapist aide
 physical therapy assistant
 physician's assistant (pa)
 physician's office nurse
@@ -713,46 +713,46 @@ physics professor
 pilot (commercial airlines)
 plant breeder
 plant manager (manufacturing)
-plasterers and stucco masons
+plasterer and stucco mason
 plastic surgeon
 platemakers (graphic arts)
 plumber (plumbing contractor)
-poets and lyricists
+poets and lyricist
 police and detectives supervisor
 police artist
-police identification and records officers
+police identification and records officer
 police officer
 political science professor
 political scientist
-postal service clerks
-postal service mail carriers
+postal service clerk
+postal service mail carrier
 postal service mail sorter
-postmasters and mail superintendents
-power plant operators
+postmaster and mail superintendent
+power plant operator
 power-line installer and mechanic
-precision devices inspectors and testers
+precision devices inspectors and tester
 preschool administrator
 preschool teacher
 pressing machine operator
-pressure vessel inspectors
+pressure vessel inspector
 printing/graphic arts reproduction technician
 printmaker (artist)
-private detectives and investigators
+private detectives and investigator
 private nurse
-private sector executives
+private sector executive
 probate lawyer
 probation officer
-procurement clerks
+procurement clerk
 product planner
 product safety engineer
 production planner
-production, planning, and expediting clerks
+production, planning, and expediting clerk
 professional sports scout
-proofreaders and copy markers
+proofreader and copy marker
 property accountant
 property assessor
-property managers
-props and lighting technicians
+property manager
+props and lighting technician
 prosthetic technician
 psychiatric aide
 psychiatric technician
@@ -770,9 +770,9 @@ quality control engineer
 quality control inspector
 quality control technician
 quarry worker
-radar and sonar technicians
+radar and sonar technician
 radiation protection engineer
-radiation therapists
+radiation therapist
 radio & tv announcer
 radio & tv news commentator
 radio & tv newscaster
@@ -781,13 +781,13 @@ radio & tv program director
 radio & tv sports announcer
 radio & tv station administrator
 radio & tv talk show host
-radio mechanics
-radio operators
-radiologic technicians
+radio mechanic
+radio operator
+radiologic technician
 radiologic technologist
 radiologist (md)
-rail yard engineers
-railroad conductors and yardmasters
+rail yard engineer
+railroad conductor and yardmaster
 railroad engineer
 railroad inspector
 range manager
@@ -795,13 +795,13 @@ real estate appraiser
 real estate assessor
 real estate broker
 real estate lawyer
-real estate sales agents
+real estate sales agent
 recreation leader
 recreational protective service worker
 recreational therapist
 recreational vehicle mechanic
 referee / umpire
-refuse and recyclable material collectors
+refuse and recyclable material collector
 registrar administrator
 reliability engineer
 religious institution education coordinator
@@ -811,20 +811,20 @@ resource recovery engineer
 resource teacher
 respiratory care technician
 respiratory therapist
-respiratory therapy technicians
+respiratory therapy technician
 restaurant food coordinator
 restaurant manager
 retail buyer
 retail customer service representative
 retail inventory control analyst
 retail sales department supervisor
-retail salespersons
+retail salesperson
 retail store manager
 revenue agent (government)
 safety inspector
-sales engineers
+sales engineer
 sales floor stock clerk
-sales managers
+sales manager
 sales promoter
 sales representative (aircraft)
 sales representative (chemicals & drugs)
@@ -843,39 +843,39 @@ sales representatives (mechanical equipment)
 sales representitive (psychological tests)
 sanitary engineer
 sawing machine operator
-scanner operators
+scanner operator
 school nurse
 school plant consultant
 school psychologist
 scientific linguist
 scientific photographer
-screen printing machine operators
+screen printing machine operator
 screen writer
 script editor
 securities broker
-security and fire alarm systems installers
+security and fire alarm systems installer
 security guard
-self-enrichment education teachers
-septic tank and sewer servicers
-service station attendants
+self-enrichment education teacher
+septic tank and sewer servicer
+service station attendant
 set designer
 set illustrator
-sewing machine operators
-sheet metal workers
-ship carpenters and joiners
-ship engineers
+sewing machine operator
+sheet metal worker
+ship carpenters and joiner
+ship engineer
 ship master
 ship mate
 ship pilot
-shipping, receiving, and traffic clerks
-shoe machine operators
-signal switch repairers
-skin care specialists
-small engine mechanics
-social and community service managers
-social and human service assistants
+shipping, receiving, and traffic clerk
+shoe machine operator
+signal switch repairer
+skin care specialist
+small engine mechanic
+social and community service manager
+social and human service assistant
 social psychologist
-social science research assistants
+social science research assistant
 social service volunteer
 social welfare administrator
 social work professor
@@ -887,10 +887,10 @@ soil engineer
 soil scientist
 solar energy systems designer
 solid waste disposal administrator
-sound engineering technicians
+sound engineering technician
 special education administrator
-special forces
-special forces officers
+special force
+special forces officer
 speech pathologist
 speech writer
 sport psychologist
@@ -901,10 +901,10 @@ sports physician (orthopedist)
 sportswriter (journalist)
 stained glass artist
 standards engineer
-statement clerks
-stationary engineers
-statistical assistants
-steel workers
+statement clerk
+stationary engineer
+statistical assistant
+steel worker
 storage and distribution manager
 stress analyst engineer
 structural drafter
@@ -916,8 +916,8 @@ substance abuse counselor
 subway and streetcar conductor
 surgeons (md)
 surgical technician/technologist
-survey researchers
-surveying technicians
+survey researcher
+surveying technician
 switchboard operator
 systems accountant
 systems analyst, data processing
@@ -927,49 +927,49 @@ tax collector
 tax examiner
 tax lawyer
 tax preparer
-taxi drivers and chauffeurs
+taxi drivers and chauffeur
 teacher of the blind
 teachers aide
-team assemblers
+team assembler
 technical & scientific publications editor
-technical directors/managers
+technical directors/manager
 technical illustrator
 technical publications writer
 technological espionage intelligence agent
-telecommunications line installers and repairers
+telecommunications line installers and repairer
 telecommunications maintenance worker
 telecommunications technician
-telephone station installers
-textile bleaching and dyeing machine operators
-textile cutting machine operators
+telephone station installer
+textile bleaching and dyeing machine operator
+textile cutting machine operator
 textile designer
-tile and marble setters
+tile and marble setter
 title examiner
-title searchers
+title searcher
 tool & machine designer
-tool and die makers
-tool grinders, filers, and sharpeners
+tool and die maker
+tool grinders, filers, and sharpener
 tour guide
 town clerk
 traffic administrator (freight & passenger)
 traffic agent
-traffic technicians
+traffic technician
 transit and railroad police
-transportation attendants
+transportation attendant
 transportation systems design engineer
 travel agent
-travel clerks
+travel clerk
 travel counselor
 travel writer (journalist)
 treasurer (corporate)
-treatment plant operators
-tree trimmers and pruners
+treatment plant operator
+tree trimmers and pruner
 truck driver, light duty
 truck driver, long distance
 ultrasound technologist
 unemployment inspector
 urban and regional planner
-ushers and lobby attendants
+usher and lobby attendant
 utility meter reader
 vending machine mechanic
 veterinarian (vmd)
@@ -981,20 +981,20 @@ vocational education teachers, high school
 vocational education teachers, middle school
 vocational rehabilitation counselor
 voice pathologist
-waiters and waitresses
+waitperson
 warehouse stock clerk
-watch repairers
+watch repairer
 water pollution control inspector
 weather observer
 web art director
-weighers and measurers
+weigher and measurer
 welder (gas, arc, plasma, laser)
-welfare eligibility workers and interviewers
-wholesale buyers
+welfare eligibility workers and interviewer
+wholesale buyer
 wildlife biologist
 wildlife control agent
 windows - draperies treatment specialist
-woodworking machine operators
+woodworking machine operator
 word processing specialist
 writer /author
 zoo veterinarian
