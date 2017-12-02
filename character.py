@@ -95,10 +95,7 @@ class Character:
         clothingItem = clothesList[clothesSelection]
         clothingItem = clothingItem.rstrip("\n")
         clothingItem = color + " " + clothingItem
-        if clothingItem[-1] != "s" and clothingItem[0] == "a" or clothingItem[0] == "e" or clothingItem[0] == "i" or clothingItem[0] == "o" or clothingItem[0] == "u":
-            clothingItem = "an " + clothingItem
-        elif clothingItem[-1] != "s":
-            clothingItem = "a " + clothingItem
+        clothingItem = self.addAorAn(clothingItem)
         return clothingItem
         clothesFO.close()
 
@@ -122,7 +119,6 @@ class Character:
         careerFO.close()
         return career
 
-
     def generateHuman(self):
         random.seed(self.seed)
         humanName = self.generateHumanName()
@@ -130,10 +126,7 @@ class Character:
         hairStyle = self.getHair()
         clothes = self.getClothing()
         adjective = self.getAdjective()
-        if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
-            adjective = "an " + adjective
-        else:
-            adjective = "a " + adjective
+        adjective = self.addAorAn(adjective)
         career = self.getCareer()
         self.kind = "Human"
         self.name = humanName
@@ -180,10 +173,8 @@ class Character:
         animalType = self.getAnimalType()
         adjective = self.getAdjective()
         description = self.generateAnimalDescription()
-        if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
-            animalType = "An " + adjective + " " + animalType
-        else:
-            animalType = "A " + adjective + " " + animalType
+        animalType = adjective + " " + animalType
+        animalType = self.addAorAn(animalType)
         self.kind = "Animal"
         self.name = animalName
         self.description =  animalType + ". " + description
@@ -221,10 +212,7 @@ class Character:
         enemyname = self.getAnimalName()
         enemyType = self.getAnimalType()
         adjective = self.getAdjective()
-        if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
-            adjective = "an " + adjective
-        else:
-            adjective = "a " + adjective
+        adjective = self.addAorAn(adjective)
         description = self.generateBirdDescription()
         description = description + " " + name + " the bird is hunted through life by its enemy, " + enemyname +", " + adjective + " " + enemyType +"."
         self.kind = "Bird"
@@ -269,10 +257,7 @@ class Character:
 
         self.name = "nameless"
         self.kind = "Vegetable"
-        if color[0] == "a" or color[0] == "e" or color[0] == "i" or color[0] == "o" or color[0] == "u":
-            color = "An " + color
-        else:
-            color = "A " + color
+        color = self.addAorAn(color)
         self.description = color + " " + veggieType + ". " + vegetableDescription
 
     #robot functions
@@ -353,10 +338,7 @@ class Character:
     def generateGhostDescription(self):
         random.seed(self.seed)
         adjective = self.getAdjective()
-        if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
-            adjective = "an " + adjective
-        else:
-            adjective = "a " + adjective
+        adjective = self.addAorAn(adjective)
         ghostDescription = " "
         ghostCorpusFO = open("ghost_corpus.txt")
         text = ghostCorpusFO.read()
@@ -392,3 +374,12 @@ class Character:
 
     def __str__(self):
         return 'Name: ' + str(self.name) + '\nKind: ' + str(self.kind) + '\nDescription: ' + str(self.description)
+
+    #puts either an 'a' or 'an' before a word depending on if the word starts with a vowel or not and not at all if it's plural
+
+    def addAorAn(self, word):
+        if word[-1] != "s" and word[0] == "a" or word[0] == "e" or word[0] == "i" or word[0] == "o" or word[0] == "u":
+            word = "an " + word
+        elif word[-1] != "s":
+            word = "a " + word
+        return word
