@@ -67,7 +67,7 @@ shallot
 sorrel
 soybean
 spinach
-sprouts
+sprout
 spud
 squash
 string bean

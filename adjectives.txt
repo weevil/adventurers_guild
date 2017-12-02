@@ -247,7 +247,6 @@ hirsute
 hissing
 hopeful
 hopeless
-human
 humid
 icy
 ill

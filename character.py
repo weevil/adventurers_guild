@@ -10,19 +10,21 @@ class Character:
 
     def generateCharacter(self, seed):
         self.seed = seed
-        characterType = random.randint(0, 7)
-        if characterType == 1:
+        characterType = random.randint(0, 9)
+        if characterType <= 2:
             self.generateHuman()
-        elif characterType == 2:
-            self.generateFungus()
         elif characterType == 3:
-            self.generateVegetable()
+            self.generateFungus()
         elif characterType == 4:
-            self.generateAnimal()
+            self.generateVegetable()
         elif characterType == 5:
-            self.generateBird()
+            self.generateAnimal()
         elif characterType == 6:
+            self.generateBird()
+        elif characterType == 7:
             self.generateObelisk()
+        elif characterType == 8:
+            self.generateGhost()
         else:
             self.generateRobot()
 
@@ -128,10 +130,14 @@ class Character:
         hairStyle = self.getHair()
         clothes = self.getClothing()
         adjective = self.getAdjective()
+        if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
+            adjective = "an " + adjective
+        else:
+            adjective = "a " + adjective
         career = self.getCareer()
         self.kind = "Human"
         self.name = humanName
-        self.description = "A " +  adjective + " mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " works as a " + career + "."
+        self.description = adjective + " mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " works as a " + career + "."
 
     # here's the animal functions
     def getAnimalName(self):
@@ -155,7 +161,7 @@ class Character:
             try:
                 animalDescription += text_model.make_sentence() + " "
             except TypeError:
-                animalDescription += "It hunts daily for food."
+                animalDescription += "It hunts daily for food. "
         animalCorpusFO.close()
         return animalDescription
 
@@ -201,11 +207,11 @@ class Character:
         birdCorpusFO = open("bird_corpus.txt")
         text = birdCorpusFO.read()
         text_model = markovify.Text(text)
-        for i in range(4):
+        for i in range(3):
             try:
                 birdDescription += text_model.make_sentence() + " "
             except TypeError:
-                birdDescription += "It enjoys flying."
+                birdDescription += "It enjoys flying. "
         birdCorpusFO.close()
         return birdDescription
 
@@ -237,7 +243,7 @@ class Character:
             try:
                 vegetableDescription += text_model.make_sentence() + " "
             except TypeError:
-                vegetableDescription += " All vegetables should be presumed poisonous."
+                vegetableDescription += " All vegetables should be presumed poisonous. "
         veggieCorpusFO.close()
         return vegetableDescription
 
@@ -293,7 +299,7 @@ class Character:
             try:
                 robotDescription += text_model.make_sentence() + " "
             except TypeError:
-                robotDescription += "Robots never complain."
+                robotDescription += "Robots never complain. "
         robotCorpusFO.close()
         return robotDescription
 
@@ -331,7 +337,48 @@ class Character:
         self.name = fungiName
         self.description = "A colony of " + adjective + ", " + color + " " + fungiType + "."
 
+    #ghost functions
 
+    def getGhostName(self):
+        random.seed(self.seed)
+        #pick a first name
+        nameFO = open("ghostType.txt")
+        nameList = list(nameFO)
+        selection = random.randint(0, len(nameList) - 1)
+        name = nameList[selection]
+        name = name.rstrip("\n")
+        nameFO.close()
+        return name
+
+    def generateGhostDescription(self):
+        random.seed(self.seed)
+        adjective = self.getAdjective()
+        if adjective[0] == "a" or adjective[0] == "e" or adjective[0] == "i" or adjective[0] == "o" or adjective[0] == "u":
+            adjective = "an " + adjective
+        else:
+            adjective = "a " + adjective
+        ghostDescription = " "
+        ghostCorpusFO = open("ghost_corpus.txt")
+        text = ghostCorpusFO.read()
+        text_model = markovify.Text(text)
+        for i in range(3):
+            try:
+                ghostDescription += text_model.make_sentence() + " "
+            except TypeError:
+                ghostDescription += "Ghosts are often frightening. "
+        ghostCorpusFO.close()
+        ghostDescription = adjective + " spirit. " + ghostDescription
+        return ghostDescription
+
+    def generateGhost(self):
+        random.seed(self.seed)
+        someNumber = random.randint(0, 10000)
+        substance = self.getSubstance()
+        kind = self.getGhostName()
+        description = self.generateGhostDescription()
+        self.kind = "Ghost"
+        self.name = kind
+        self.description = description
 
     #obelisk functions
 
