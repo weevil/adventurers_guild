@@ -130,7 +130,7 @@ class Character:
         obeliskSubstance = self.getSubstance()
         self.kind = "Human"
         self.name = humanName
-        self.description = "A bipedal mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " worked as a " + career + " before emarking on their " + adjective + " quest to find the legendary " + obeliskSubstance + " obelisk"
+        self.description = "A bipedal mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " worked as a " + career + " before emarking on their " + adjective + " quest to find the legendary " + obeliskSubstance + " obelisk."
 
     # here's the animal functions
     def getAnimalName(self):

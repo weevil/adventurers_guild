@@ -9,7 +9,7 @@ from pyglet.window import key
 pyglet.font.add_file('FredokaOne-Regular.ttf')
 pyglet.font.add_file('ProFontIIx.ttf')
 newCharacter = character.Character()
-window = pyglet.window.Window(500, 800, caption='Adventurer\'s Guild')
+window = pyglet.window.Window(500, 600, caption='Adventurer\'s Guild')
 document = pyglet.text.document.FormattedDocument()
 layout = pyglet.text.layout.TextLayout(document, 500, 600)
 title = pyglet.text.Label('Press ENTER to summon an entity',
