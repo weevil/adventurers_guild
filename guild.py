@@ -31,6 +31,8 @@ def on_key_press(symbol, modifiers):
         seed= random.randint(0,9999)
         newCharacter.generateCharacter(seed)
         print('Enter was pressed')
+        characterText.draw()
+        print(newCharacter)
     return newCharacter
     window.push_handlers(on_key_press)
 

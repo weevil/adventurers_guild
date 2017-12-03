@@ -149,10 +149,10 @@ class Character:
         random.seed(self.seed)
         animalCorpusFO = open("animal_corpus.txt")
         text = animalCorpusFO.read()
-        text_model = markovify.Text(text)
+        text_model = markovify.NewlineText(text)
         for i in range(4):
             try:
-                animalDescription += text_model.make_sentence() + " "
+                animalDescription += text_model.make_sentence(tries=100) + " "
             except TypeError:
                 animalDescription += "It hunts daily for food. "
         animalCorpusFO.close()
@@ -197,7 +197,7 @@ class Character:
         birdDescription = " "
         birdCorpusFO = open("bird_corpus.txt")
         text = birdCorpusFO.read()
-        text_model = markovify.Text(text)
+        text_model = markovify.NewlineText(text)
         for i in range(3):
             try:
                 birdDescription += text_model.make_sentence() + " "
@@ -226,12 +226,9 @@ class Character:
         vegetableDescription = " "
         veggieCorpusFO = open("veggie_corpus.txt")
         text = veggieCorpusFO.read()
-        text_model = markovify.Text(text)
+        text_model = markovify.NewlineText(text)
         for i in range(2):
-            try:
-                vegetableDescription += text_model.make_sentence() + " "
-            except TypeError:
-                vegetableDescription += " All vegetables should be presumed poisonous. "
+            vegetableDescription += text_model.make_sentence(tries=100) + " "
         veggieCorpusFO.close()
         return vegetableDescription
 
@@ -281,10 +278,7 @@ class Character:
         text = robotCorpusFO.read()
         text_model = markovify.Text(text)
         for i in range(4):
-            try:
-                robotDescription += text_model.make_sentence() + " "
-            except TypeError:
-                robotDescription += "Robots never complain. "
+            robotDescription += text_model.make_sentence(tries=100) + " "
         robotCorpusFO.close()
         return robotDescription
 
@@ -344,10 +338,7 @@ class Character:
         text = ghostCorpusFO.read()
         text_model = markovify.Text(text)
         for i in range(3):
-            try:
-                ghostDescription += text_model.make_sentence() + " "
-            except TypeError:
-                ghostDescription += "Ghosts are often frightening. "
+            ghostDescription += text_model.make_sentence(tries=100) + " "
         ghostCorpusFO.close()
         ghostDescription = adjective + " spirit. " + ghostDescription
         return ghostDescription
