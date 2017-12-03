@@ -81,7 +81,6 @@ crayfish
 creature
 critter
 crocodile
-crow
 crustacean
 cub
 cuckoo
@@ -90,7 +89,6 @@ cyborg
 deer
 dingo
 dinosaur
-dodo
 dog
 dogfish
 dollar

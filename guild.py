@@ -20,7 +20,7 @@ title = pyglet.text.Label('Press ENTER to summon an entity',
 characterText = pyglet.text.Label( str(newCharacter),
                                     font_name='ProFontIIx',
                                     font_size=10,
-                                    color=(15,10,10,255),
+                                    color=(10,10,10,255),
                                     x=10,y=window.height - 40,
                                     anchor_x='left', anchor_y='top')
 
@@ -30,9 +30,8 @@ def on_key_press(symbol, modifiers):
     if symbol == key.ENTER:
         seed= random.randint(0,9999)
         newCharacter.generateCharacter(seed)
+        characterText.text = str(newCharacter)
         print('Enter was pressed')
-        characterText.draw()
-        print(newCharacter)
     return newCharacter
     window.push_handlers(on_key_press)
 
