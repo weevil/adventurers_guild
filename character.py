@@ -126,11 +126,11 @@ class Character:
         hairStyle = self.getHair()
         clothes = self.getClothing()
         adjective = self.getAdjective()
-        adjective = self.addAorAn(adjective)
         career = self.getCareer()
+        obeliskSubstance = self.getSubstance()
         self.kind = "Human"
         self.name = humanName
-        self.description = adjective + " mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " works as a " + career + "."
+        self.description = "A bipedal mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " worked as a " + career + " before emarking on their " + adjective + " quest to find the legendary " + obeliskSubstance + " obelisk"
 
     # here's the animal functions
     def getAnimalName(self):
@@ -364,7 +364,7 @@ class Character:
         self.description = "A " + str(someNumber) + " foot high obelisk made of " + substance + "."
 
     def __str__(self):
-        return 'Name: ' + str(self.name) + '\nKind: ' + str(self.kind) + '\nDescription: ' + str(self.description)
+        return 'Name: ' + str(self.name) + '\n \nKind: ' + str(self.kind) + '\n \nDescription: ' + str(self.description)
 
     #puts either an 'a' or 'an' before a word depending on if the word starts with a vowel or not and not at all if it's plural
 
