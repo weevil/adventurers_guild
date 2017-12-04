@@ -37,6 +37,7 @@ def on_key_press(symbol, modifiers):
         newCharacter.generateCharacter(seed)
         characterText.text = str(newCharacter)
         print('Enter was pressed')
+        print(newCharacter)
     return newCharacter
     window.push_handlers(on_key_press)
 
@@ -46,6 +47,7 @@ def on_draw():
     window.clear()
     title.draw()
     characterText.draw()
+
 
 
 

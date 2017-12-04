@@ -7,6 +7,7 @@ class Character:
         self.name = "Wiley Wiggins"
         self.kind = "Human"
         self.description = "A middle-aged, pasty community college student"
+        self.skills = ["procrastination: 12", "irritability: 18"]
 
     def generateCharacter(self, seed):
         self.seed = seed
@@ -27,6 +28,20 @@ class Character:
             self.generateGhost()
         else:
             self.generateRobot()
+
+    def getSkills(self):
+        random.seed(self.seed)
+        skillsFO = open("skills.txt")
+        skillsList = list(skillsFO)
+        skillsFO.close()
+        skills = []
+        for n in range(4):
+            selection = random.randint(0, len(skillsList) - 1)
+            skill = skillsList[selection]
+            skill = skill.rstrip("\n")
+            skill = skill + ": " + str(random.randint(-10, 18))
+            skills.append(skill)
+        return skills
 
     #substances and adjectives would probably be shared by multiple character types
 
@@ -131,6 +146,7 @@ class Character:
         self.kind = "Human"
         self.name = humanName
         self.description = "A bipedal mammal with smooth skin and " + hairStyle + " hair on its head. It is wearing " + clothingItem + ". " + humanName + " worked as a " + career + " before embarking on their " + adjective + " quest to find the legendary " + obeliskSubstance + " obelisk."
+        self.skills = self.getSkills()
 
     # here's the animal functions
     def getAnimalName(self):
@@ -178,6 +194,7 @@ class Character:
         self.kind = "Animal"
         self.name = animalName
         self.description =  animalType + ". " + description
+        self.skills = self.getSkills()
 
     #here's the bird functions
 
@@ -218,6 +235,7 @@ class Character:
         self.kind = "Bird"
         self.name = name
         self.description = description
+        self.skills = self.getSkills()
 
 
     #veggies
@@ -256,6 +274,7 @@ class Character:
         self.kind = "Vegetable"
         color = self.addAorAn(color)
         self.description = color + " " + veggieType + ". " + vegetableDescription
+        self.skills = ["None"]
 
     #robot functions
 
@@ -289,6 +308,7 @@ class Character:
         self.kind = "Robot"
         self.name = name
         self.description = "A hard working robot." + " " + description
+        self.skills = self.getSkills()
 
     #fungus functions
 
@@ -315,6 +335,7 @@ class Character:
         self.kind = "Fungus"
         self.name = fungiName
         self.description = "A colony of " + adjective + ", " + color + " " + fungiType + "."
+        self.skills = ["None"]
 
     #ghost functions
 
@@ -352,6 +373,7 @@ class Character:
         self.kind = "Ghost"
         self.name = kind
         self.description = description
+        self.skills = self.getSkills()
 
     #obelisk functions
 
@@ -362,9 +384,12 @@ class Character:
         self.kind = "Obelisk"
         self.name = "nameless"
         self.description = "A " + str(someNumber) + " foot high obelisk made of " + substance + "."
+        self.skills = ["None"]
 
     def __str__(self):
-        return 'Name: ' + str(self.name) + '\n \nKind: ' + str(self.kind) + '\n \nDescription: ' + str(self.description)
+        skillsString = "\n".join(self.skills)
+        return 'Name: ' + str(self.name) + '\n \nKind: ' + str(self.kind) + '\n \nDescription: ' + str(self.description) + '\n \nSkills\n' + skillsString
+
 
     #puts either an 'a' or 'an' before a word depending on if the word starts with a vowel or not and not at all if it's plural
 
