@@ -57,12 +57,18 @@ class Character:
         substance = substance.rstrip("\n")
         return substance
 
-    def getAdjective(self):
+    def getAdjective(self, reversed):
         random.seed(self.seed)
         adjectiveFO = open("word_lists/adjectives.txt")
         adjectiveList = list(adjectiveFO)
         selection = random.randint(0, len(adjectiveList) - 1)
-        adjective = adjectiveList[selection]
+
+    # This lets us pick from two different random names with the same seed, for two adjectives in one character.
+
+        if reversed == True:
+            adjective = adjectiveList[-selection]
+        else:
+            adjective = adjectiveList[selection]
         adjective = adjective.rstrip("\n")
         return adjective
 
@@ -153,13 +159,13 @@ class Character:
         clothingItem = self.getClothing()
         hairStyle = self.getHair()
         clothes = self.getClothing()
-        adjective = self.getAdjective()
+        adjective = self.getAdjective(False)
         career = self.getCareer()
         career = self.addAorAn(career)
         obeliskSubstance = self.getSubstance()
         petName = self.getAnimalName()
         petType = self.getAnimalType()
-        petAdjective = self.getAdjective()
+        petAdjective = self.getAdjective(True)
         item = self.getItem()
         item = self.addAorAn(item)
         self.kind = "Human"
@@ -174,7 +180,7 @@ class Character:
         nameFO = open("word_lists/firstnames.txt")
         nameList = list(nameFO)
         selection = random.randint(0, len(nameList) - 1)
-        name = nameList[selection]
+        name = nameList[-selection] # This is so animals have different names than humans even with the same seed
         name = name.rstrip("\n")
         nameFO.close()
         return name
@@ -206,7 +212,7 @@ class Character:
         random.seed(self.seed)
         animalName = self.getAnimalName()
         animalType = self.getAnimalType()
-        adjective = self.getAdjective()
+        adjective = self.getAdjective(False)
         description = self.generateAnimalDescription()
         animalType = adjective + " " + animalType
         animalType = self.addAorAn(animalType)
@@ -244,7 +250,7 @@ class Character:
         name = self.getBirdName()
         enemyname = self.getAnimalName()
         enemyType = self.getAnimalType()
-        adjective = self.getAdjective()
+        adjective = self.getAdjective(False)
         adjective = self.addAorAn(adjective)
         description = self.generateBirdDescription()
         description = description + " " + name + " the bird is hunted through life by its enemy, " + enemyname +", " + adjective + " " + enemyType +"."
@@ -340,13 +346,14 @@ class Character:
         return name
 
     def generateFungus(self):
+        random.seed(self.seed)
         fungiName = self.generateFungiName()
         nameFO = open("word_lists/fungiType.txt")
         nameList = list(nameFO)
         selection = random.randint(0, len(nameList) - 1)
         fungiType = nameList[selection]
         fungiType = fungiType.rstrip("\n")
-        adjective = self.getAdjective()
+        adjective = self.getAdjective(False)
         color = self.getColor()
         self.kind = "Fungus"
         self.name = fungiName
@@ -368,10 +375,10 @@ class Character:
 
     def generateGhostDescription(self):
         random.seed(self.seed)
-        adjective = self.getAdjective()
+        adjective = self.getAdjective(False)
         adjective = self.addAorAn(adjective)
         ghostDescription = " "
-        ghostCorpusFO = open("word_lists/ghost_corpus.txt")
+        ghostCorpusFO = open("text_corpus/ghost_corpus.txt")
         text = ghostCorpusFO.read()
         text_model = markovify.Text(text)
         for i in range(3):
