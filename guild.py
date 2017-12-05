@@ -6,16 +6,26 @@ import character
 import pyglet
 from pyglet.window import key
 
-pyglet.font.add_file('FredokaOne-Regular.ttf')
-pyglet.font.add_file('ProFontIIx.ttf')
+#import custom fonts
+
+pyglet.font.add_file('assets/FredokaOne-Regular.ttf')
+pyglet.font.add_file('assets/ProFontIIx.ttf')
+
+#pyglet window and a character instance
+
 newCharacter = character.Character()
 window = pyglet.window.Window(500, 600, caption='Adventurer\'s Guild')
+
+#main body text and some formatting
+
 title = pyglet.text.Label('Press ENTER to summon an entity',
                           font_name='Fredoka One',
                           font_size=16,
                           color=(249,104,107,255),
                           x=window.width//2, y=window.height-16,
                           anchor_x='center', anchor_y='center')
+
+
 
 characterText = pyglet.text.Label( str(newCharacter),
                                     font_name='ProFontIIx',
@@ -27,7 +37,7 @@ characterText.width= 480
 characterText.multiline = True
 characterText.wrap_lines = True
 
-
+#keypress function
 
 @window.event
 def on_key_press(symbol, modifiers):
@@ -40,6 +50,8 @@ def on_key_press(symbol, modifiers):
         print(newCharacter)
     return newCharacter
     window.push_handlers(on_key_press)
+
+#pyglet draw loop
 
 @window.event
 def on_draw():

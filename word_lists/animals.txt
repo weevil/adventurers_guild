@@ -96,7 +96,6 @@ dolphin
 donkey
 dormouse
 dotterel
-dove
 dragonfly
 dromedary
 duckbill platypus
@@ -114,19 +113,15 @@ elephant seal
 elk
 emu
 faerie
-falcon
 fauna
 feline
 ferret
 fink
 firefly
 fish
-flamingo
 flatworm
 flea
 fly
-flycatcher
-fowl
 fox
 frog
 froggy
