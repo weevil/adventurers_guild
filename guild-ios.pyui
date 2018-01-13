@@ -1,0 +1,117 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{256, 462}, {80, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "nextButton",
+          "image_name" : "iob:arrow_right_b_32",
+          "frame" : "{{138, 240}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.527778,0.527778,1.000000)",
+          "title" : "new",
+          "uuid" : "24B90DF0-F66B-4A4B-922E-EE9F6283D997",
+          "class" : "Button",
+          "font_size" : 15,
+          "name" : "button"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{16, 462}, {80, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "save",
+          "name" : "saveButton",
+          "frame" : "{{138, 240}, {80, 32}}",
+          "tint_color" : "RGBA(0.156709,0.705189,0.156709,1.000000)",
+          "title" : "save",
+          "uuid" : "D288D499-21BB-4941-85DB-A5B17F2CFB0B",
+          "class" : "Button",
+          "font_size" : 15,
+          "image_name" : "iob:ios7_download_24"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{104, 462}, {144, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "textfield1",
+          "frame" : "{{78, 240}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "tint_color" : "RGBA(1.000000,0.970588,0.990196,1.000000)",
+          "class" : "TextField",
+          "uuid" : "E14D9C32-48F4-4D2E-839D-4101B7029084",
+          "alignment" : "left",
+          "background_color" : "RGBA(0.856132,0.856132,0.856132,1.000000)",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{16, 46}, {320, 408}}",
+        "class" : "TextView",
+        "attributes" : {
+          "uuid" : "AA1F21C8-D610-4818-9BAD-888C16F42887",
+          "font_size" : 17,
+          "frame" : "{{78, 156}, {200, 200}}",
+          "tint_color" : "RGBA(0.266509,0.266509,0.266509,1.000000)",
+          "editable" : false,
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "text" : "",
+          "font_name" : "<System>",
+          "spellchecking_type" : "default",
+          "class" : "TextView",
+          "name" : "textview1",
+          "flex" : "WH"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{52, 6}, {265, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label1",
+          "text_color" : "RGBA(1.000000,0.638889,0.638889,1.000000)",
+          "frame" : "{{103, 240}, {150, 32}}",
+          "uuid" : "9833D067-CAD8-4B59-BBE0-0BEF998BD9B4",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "An adventurer appears!",
+          "font_size" : 18,
+          "font_name" : "ArialRoundedMTBold"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {356, 511}}",
+    "class" : "View",
+    "attributes" : {
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]
