@@ -77,7 +77,7 @@ class Character:
     def generateHumanName(self):
         random.seed(self.seed)
         #pick a first name
-        firstnameFO = open("word_lists/firstnames.txt", encoding='utf-8')
+        firstnameFO = open("word_lists/firstnames.txt")
         firstnameList = list(firstnameFO)
         selection = random.randint(0, len(firstnameList) - 1)
         firstname = firstnameList[selection]
