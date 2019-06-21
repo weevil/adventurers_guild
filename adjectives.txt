@@ -456,13 +456,9 @@ woeful
 xenophobic
 young
 zesty
-zingy]
-local randInt = random(0 wordArray.len() - 1);
-return wordArray[randInt];
-}
+zingy
 
-function randomSkillMode() {
-wordArray <- [Aristotelean
+Aristotelean
 post-Darwinian
 post-Freudian
 post-Marxist
