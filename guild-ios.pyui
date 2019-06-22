@@ -15,8 +15,8 @@
           "title" : "new",
           "uuid" : "24B90DF0-F66B-4A4B-922E-EE9F6283D997",
           "class" : "Button",
-          "name" : "",
-          "font_size" : 15
+          "font_size" : 15,
+          "name" : "nextButton"
         },
         "selected" : false
       },
@@ -28,13 +28,13 @@
         "class" : "Button",
         "attributes" : {
           "action" : "saveButton",
-          "font_size" : 15,
+          "name" : "saveButton",
           "frame" : "{{138, 240}, {80, 32}}",
           "tint_color" : "RGBA(0.156709,0.705189,0.156709,1.000000)",
           "title" : "copy",
           "uuid" : "D288D499-21BB-4941-85DB-A5B17F2CFB0B",
           "class" : "Button",
-          "name" : "",
+          "font_size" : 15,
           "image_name" : "iob:clipboard_24"
         },
         "selected" : true
@@ -46,7 +46,7 @@
         "frame" : "{{104, 462}, {144, 32}}",
         "class" : "TextField",
         "attributes" : {
-          "font_size" : 17,
+          "name" : "textfield1",
           "frame" : "{{78, 240}, {200, 32}}",
           "spellchecking_type" : "default",
           "tint_color" : "RGBA(1.000000,0.970588,0.990196,1.000000)",
@@ -55,7 +55,7 @@
           "alignment" : "left",
           "background_color" : "RGBA(0.856132,0.856132,0.856132,1.000000)",
           "autocorrection_type" : "default",
-          "name" : "textfield1",
+          "font_size" : 17,
           "font_name" : "<System>"
         },
         "selected" : false
