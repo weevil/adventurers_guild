@@ -37,7 +37,9 @@ animals are similar in anatomy to the other felids, with a strong flexible body,
 Animal senses fit a crepuscular and predatory ecological niche. animals can hear sounds too faint or too high in frequency for human ears, such as those made by mice and other small animals. They can see in near darkness.
 Like most other mammals, animals have poorer color vision and a better sense of smell than humans.
 Animals, despite being solitary hunters, are a social species and animal communianimalion includes the use of a variety of vocalizations (mewing, purring, trilling, hissing, growling, and grunting), as well as animal pheromones and types of animal-specific body language.
-Animals have a high breeding rate. Under controlled breeding, they can be bred and shown as registered pedigree pets, a hobby known as animal fancy. Failure to control the breeding of pet animals by neutering, as well as the abandonment of former household pets, has resulted in large numbers of feral animals worldwide, requiring population control.[9] In certain areas outside animals' native range, this has contributed, along with habitat destruction and other factors, to the extinction of many bird species. animals have been known to extirpate a bird species within specific regions and may have contributed to the extinction of isolated island populations.
+Animals have a high breeding rate.
+Under controlled breeding, they can be bred and shown as registered pedigree pets, a hobby known as animal fancy. Failure to control the breeding of pet animals by neutering, as well as the abandonment of former household pets, has resulted in large numbers of feral animals worldwide, requiring population control.
+In certain areas outside animals' native range, this has contributed, along with habitat destruction and other factors, to the extinction of many bird species. animals have been known to extirpate a bird species within specific regions and may have contributed to the extinction of isolated island populations.
 Animals are thought to be primarily responsible for the extinction of 33 species of birds, and the presence of feral and free-ranging animals makes some otherwise suitable loanimalions unsuitable for attempted species reintroduction.
 Since animals were venerated in ancient Egypt, they were commonly believed to have been domesticated there, but there may have been instances of domestication as early as the Neolithic from around 9,500 years ago (7,500 BC).
 A genetic study in 2007 concluded that all domestic animals are descended from Near Eastern wild animals, having diverged around 8,000 BC in the Middle East.
@@ -48,3 +50,14 @@ In a 2010 study they were ranked the third most popular pet in the UK, after fis
 A wild creature that hunts at night and sleeps during the day.
 A tame beast that nurtures its young.
 A faithful animal that can be counted on.
+It has blue eyes.
+Its eyes are green.
+Its eyes are brown.
+It has no eyes.
+Body covered by hair or fur.
+Warm-blooded.
+Has a backbone.
+Produces milk.
+Its fur is golden.
+It has no fur.
+A wild beast.
