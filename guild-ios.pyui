@@ -15,10 +15,10 @@
           "title" : "new",
           "uuid" : "24B90DF0-F66B-4A4B-922E-EE9F6283D997",
           "class" : "Button",
-          "font_size" : 15,
-          "name" : "button"
+          "name" : "",
+          "font_size" : 15
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -27,17 +27,17 @@
         "frame" : "{{16, 462}, {80, 32}}",
         "class" : "Button",
         "attributes" : {
-          "action" : "save",
-          "name" : "saveButton",
+          "action" : "saveButton",
+          "font_size" : 15,
           "frame" : "{{138, 240}, {80, 32}}",
           "tint_color" : "RGBA(0.156709,0.705189,0.156709,1.000000)",
-          "title" : "save",
+          "title" : "copy",
           "uuid" : "D288D499-21BB-4941-85DB-A5B17F2CFB0B",
           "class" : "Button",
-          "font_size" : 15,
-          "image_name" : "iob:ios7_download_24"
+          "name" : "",
+          "image_name" : "iob:clipboard_24"
         },
-        "selected" : false
+        "selected" : true
       },
       {
         "nodes" : [
@@ -46,7 +46,7 @@
         "frame" : "{{104, 462}, {144, 32}}",
         "class" : "TextField",
         "attributes" : {
-          "name" : "textfield1",
+          "font_size" : 17,
           "frame" : "{{78, 240}, {200, 32}}",
           "spellchecking_type" : "default",
           "tint_color" : "RGBA(1.000000,0.970588,0.990196,1.000000)",
@@ -55,7 +55,7 @@
           "alignment" : "left",
           "background_color" : "RGBA(0.856132,0.856132,0.856132,1.000000)",
           "autocorrection_type" : "default",
-          "font_size" : 17,
+          "name" : "textfield1",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -64,7 +64,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{16, 46}, {320, 408}}",
+        "frame" : "{{16, 46}, {323, 410}}",
         "class" : "TextView",
         "attributes" : {
           "uuid" : "AA1F21C8-D610-4818-9BAD-888C16F42887",
@@ -103,7 +103,7 @@
         "selected" : false
       }
     ],
-    "frame" : "{{0, 0}, {356, 511}}",
+    "frame" : "{{0, 0}, {354, 509}}",
     "class" : "View",
     "attributes" : {
       "enabled" : true,

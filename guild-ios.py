@@ -12,16 +12,18 @@ view.present('sheet')
 newCharacter = character.Character()
 view['textview1'].text = str(newCharacter)
 
-def nextButton():
-    if seed == "":
-        seed= random.randint(0,9999)
+def nextButton(sender):
+    #print("next button pressed")
+    global seed
+    seed= random.randint(0,9999)
     newCharacter.generateCharacter(seed)
     view['textview1'].text = str(newCharacter)
-    view.reloadData()
+    view['label1'].text = str("An adventurer appears!")
 
-def saveButton():
+def saveButton(sender):
     print("i saved")
-    
+    clipboard.set(view['textview1'].text)
+    view['label1'].text = str("copied to clipboard")
 
 
 
