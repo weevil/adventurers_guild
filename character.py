@@ -1,4 +1,5 @@
 import random
+import io
 import markovify
 
 
@@ -34,7 +35,7 @@ class Character:
 
     def getSkills(self):
         random.seed(self.seed)
-        skillsFO = open("word_lists/skills.txt")
+        skillsFO = io.open("word_lists/skills.txt", encoding="utf-8")
         skillsList = list(skillsFO)
         skillsFO.close()
         skills = []
@@ -50,7 +51,7 @@ class Character:
 
     def getSubstance(self):
         random.seed(self.seed)
-        substanceFO = open("word_lists/substances.txt")
+        substanceFO = io.open("word_lists/substances.txt", encoding="utf-8")
         substanceList = list(substanceFO)
         selection = random.randint(0, len(substanceList) - 1)
         substance = substanceList[selection]
@@ -59,7 +60,7 @@ class Character:
 
     def getAdjective(self, reversed):
         random.seed(self.seed)
-        adjectiveFO = open("word_lists/adjectives.txt")
+        adjectiveFO = io.open("word_lists/adjectives.txt", encoding="utf-8")
         adjectiveList = list(adjectiveFO)
         selection = random.randint(0, len(adjectiveList) - 1)
 
@@ -77,7 +78,7 @@ class Character:
     def generateHumanName(self):
         random.seed(self.seed)
         #pick a first name
-        firstnameFO = open("word_lists/firstnames.txt")
+        firstnameFO = io.open("word_lists/firstnames.txt", encoding="utf-8")
         firstnameList = list(firstnameFO)
         selection = random.randint(0, len(firstnameList) - 1)
         firstname = firstnameList[selection]
@@ -85,8 +86,8 @@ class Character:
         firstnameFO.close()
 
         #pick a last name
-        lastnameFO = open("word_lists/lastnameBeginnings.txt")
-        lastnameEndingsFO = open("word_lists/lastnameEndings.txt")
+        lastnameFO = io.open("word_lists/lastnameBeginnings.txt", encoding="utf-8")
+        lastnameEndingsFO = io.open("word_lists/lastnameEndings.txt", encoding="utf-8")
         lastnameList = list(lastnameFO)
         lastnameEndingsList = list(lastnameEndingsFO)
         selection = random.randint(0, len(lastnameList) - 1)
@@ -102,7 +103,7 @@ class Character:
 
     def getColor(self):
         random.seed(self.seed)
-        colorsFO = open("word_lists/colors.txt")
+        colorsFO = io.open("word_lists/colors.txt", encoding="utf-8")
         colorsList = list(colorsFO)
         colorsSelection = random.randint(0, len(colorsList) - 1)
         color = colorsList[colorsSelection]
@@ -112,7 +113,7 @@ class Character:
 
     def getClothing(self):
         random.seed(self.seed)
-        clothesFO = open("word_lists/clothes.txt")
+        clothesFO = io.open("word_lists/clothes.txt", encoding="utf-8")
         clothesList = list(clothesFO)
         color = self.getColor();
         clothesSelection = random.randint(0, len(clothesList) - 1)
@@ -125,7 +126,7 @@ class Character:
 
     def getHair(self):
         random.seed(self.seed)
-        hairFO = open("word_lists/hair.txt")
+        hairFO = io.open("word_lists/hair.txt", encoding="utf-8")
         hairList = list(hairFO)
         selection = random.randint(0, len(hairList) - 1)
         hair = hairList[selection]
@@ -135,7 +136,7 @@ class Character:
 
     def getCareer(self):
         random.seed(self.seed)
-        careerFO = open("word_lists/careers.txt")
+        careerFO = io.open("word_lists/careers.txt", encoding="utf-8")
         careerList = list(careerFO)
         selection = random.randint(0, len(careerList) - 1)
         career = careerList[selection]
@@ -145,7 +146,7 @@ class Character:
 
     def getItem(self):
         random.seed(self.seed)
-        itemFO = open("word_lists/items.txt")
+        itemFO = io.open("word_lists/items.txt", encoding="utf-8")
         itemList = list(itemFO)
         selection = random.randint(0, len(itemList) - 1)
         item = itemList[selection]
@@ -177,7 +178,7 @@ class Character:
     def getAnimalName(self):
         random.seed(self.seed)
         #pick a first name
-        nameFO = open("word_lists/firstnames.txt")
+        nameFO = io.open("word_lists/firstnames.txt", encoding="utf-8")
         nameList = list(nameFO)
         selection = random.randint(0, len(nameList) - 1)
         name = nameList[-selection] # This is so animals have different names than humans even with the same seed
@@ -188,7 +189,7 @@ class Character:
     def generateAnimalDescription(self):
         animalDescription = " "
         random.seed(self.seed)
-        animalCorpusFO = open("text_corpus/animal_corpus.txt")
+        animalCorpusFO = io.open("text_corpus/animal_corpus.txt", encoding="utf-8")
         text = animalCorpusFO.read()
         text_model = markovify.NewlineText(text)
         for i in range(4):
@@ -200,7 +201,7 @@ class Character:
         return animalDescription
 
     def getAnimalType(self):
-        animalTypeFO = open("word_lists/animals.txt")
+        animalTypeFO = io.open("word_lists/animals.txt", encoding="utf-8")
         animalList = list(animalTypeFO)
         selection = random.randint(0, len(animalList) - 1)
         animalType = animalList[selection]
@@ -226,7 +227,7 @@ class Character:
     def getBirdName(self):
         random.seed(self.seed)
         #pick a first name
-        nameFO = open("word_lists/birdName.txt")
+        nameFO = io.open("word_lists/birdName.txt", encoding="utf-8")
         nameList = list(nameFO)
         selection = random.randint(0, len(nameList) - 1)
         name = nameList[selection]
@@ -237,7 +238,7 @@ class Character:
     def generateBirdDescription(self):
         random.seed(self.seed)
         birdDescription = " "
-        birdCorpusFO = open("text_corpus/bird_corpus.txt")
+        birdCorpusFO = io.open("text_corpus/bird_corpus.txt", encoding="utf-8")
         text = birdCorpusFO.read()
         text_model = markovify.NewlineText(text)
         for i in range(3):
@@ -264,7 +265,7 @@ class Character:
     def generateVegetableDescription(self):
         random.seed(self.seed)
         vegetableDescription = " "
-        veggieCorpusFO = open("text_corpus/veggie_corpus.txt")
+        veggieCorpusFO = io.open("text_corpus/veggie_corpus.txt", encoding="utf-8") 
         text = veggieCorpusFO.read()
         text_model = markovify.NewlineText(text)
         for i in range(2):
@@ -278,14 +279,14 @@ class Character:
         color = self.getColor()
         vegetableDescription = self.generateVegetableDescription()
         if veggieType == 1:
-            pumpkinsFO = open("word_lists/pumpkins.txt")
+            pumpkinsFO = io.open("word_lists/pumpkins.txt", encoding="utf-8")
             pumpkinsList = list(pumpkinsFO)
             selection = random.randint(0, len(pumpkinsList) -1)
             veggieType = pumpkinsList[selection]
             veggieType = veggieType.rstrip("\n")
             pumpkinsFO.close()
         else:
-            vegetablesFO = open("word_lists/vegetables.txt")
+            vegetablesFO = io.open("word_lists/vegetables.txt", encoding="utf-8")
             vegetablesList = list(vegetablesFO)
             selection = random.randint(0, len(vegetablesList))
             veggieType = vegetablesList[selection]
@@ -303,7 +304,7 @@ class Character:
     def getRobotName(self):
         random.seed(self.seed)
         #pick a first name
-        nameFO = open("word_lists/robotName.txt")
+        nameFO = io.open("word_lists/robotName.txt", encoding="utf-8")
         nameList = list(nameFO)
         selection = random.randint(0, len(nameList) - 1)
         name = nameList[selection]
@@ -315,7 +316,7 @@ class Character:
     def generateRobotDescription(self):
         random.seed(self.seed)
         robotDescription = " "
-        robotCorpusFO = open("text_corpus/robot_corpus.txt")
+        robotCorpusFO = io.open("text_corpus/robot_corpus.txt", encoding="utf-8")
         text = robotCorpusFO.read()
         text_model = markovify.Text(text)
         for i in range(4):
@@ -337,7 +338,7 @@ class Character:
     def generateFungiName(self):
         random.seed(self.seed)
         #pick a first name
-        nameFO = open("word_lists/fungiName.txt")
+        nameFO = io.open("word_lists/fungiName.txt", encoding="utf-8")
         nameList = list(nameFO)
         selection = random.randint(0, len(nameList) - 1)
         name = nameList[selection]
@@ -348,7 +349,7 @@ class Character:
     def generateFungus(self):
         random.seed(self.seed)
         fungiName = self.generateFungiName()
-        nameFO = open("word_lists/fungiType.txt")
+        nameFO = io.open("word_lists/fungiType.txt", encoding="utf-8")
         nameList = list(nameFO)
         selection = random.randint(0, len(nameList) - 1)
         fungiType = nameList[selection]
@@ -365,7 +366,7 @@ class Character:
     def getGhostName(self):
         random.seed(self.seed)
         #pick a first name
-        nameFO = open("word_lists/ghostType.txt")
+        nameFO = io.open("word_lists/ghostType.txt", encoding="utf-8") 
         nameList = list(nameFO)
         selection = random.randint(0, len(nameList) - 1)
         name = nameList[selection]
@@ -378,7 +379,7 @@ class Character:
         adjective = self.getAdjective(False)
         adjective = self.addAorAn(adjective)
         ghostDescription = " "
-        ghostCorpusFO = open("text_corpus/ghost_corpus.txt")
+        ghostCorpusFO = io.open("text_corpus/ghost_corpus.txt", encoding="utf-8")
         text = ghostCorpusFO.read()
         text_model = markovify.Text(text)
         for i in range(3):
