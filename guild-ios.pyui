@@ -15,8 +15,8 @@
           "title" : "new",
           "uuid" : "24B90DF0-F66B-4A4B-922E-EE9F6283D997",
           "class" : "Button",
-          "font_size" : 15,
-          "name" : "nextButton"
+          "name" : "nextButton",
+          "font_size" : 15
         },
         "selected" : false
       },
@@ -28,16 +28,16 @@
         "class" : "Button",
         "attributes" : {
           "action" : "saveButton",
-          "name" : "saveButton",
+          "font_size" : 15,
           "frame" : "{{138, 240}, {80, 32}}",
           "tint_color" : "RGBA(0.156709,0.705189,0.156709,1.000000)",
           "title" : "copy",
           "uuid" : "D288D499-21BB-4941-85DB-A5B17F2CFB0B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "saveButton",
           "image_name" : "iob:clipboard_24"
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -46,19 +46,21 @@
         "frame" : "{{104, 462}, {144, 32}}",
         "class" : "TextField",
         "attributes" : {
-          "name" : "textfield1",
-          "frame" : "{{78, 240}, {200, 32}}",
-          "spellchecking_type" : "default",
-          "tint_color" : "RGBA(1.000000,0.970588,0.990196,1.000000)",
-          "class" : "TextField",
           "uuid" : "E14D9C32-48F4-4D2E-839D-4101B7029084",
-          "alignment" : "left",
           "background_color" : "RGBA(0.856132,0.856132,0.856132,1.000000)",
-          "autocorrection_type" : "default",
-          "font_size" : 17,
-          "font_name" : "<System>"
+          "frame" : "{{78, 240}, {200, 32}}",
+          "tint_color" : "RGBA(1.000000,0.970588,0.990196,1.000000)",
+          "action" : "textField",
+          "alignment" : "center",
+          "autocorrection_type" : "no",
+          "placeholder" : "seed",
+          "font_name" : "<System>",
+          "spellchecking_type" : "no",
+          "class" : "TextField",
+          "name" : "textfield1",
+          "font_size" : 17
         },
-        "selected" : false
+        "selected" : true
       },
       {
         "nodes" : [
