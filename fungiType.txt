@@ -9,11 +9,11 @@ bunts
 rusts
 chanterelles
 earth stars
-Trichophyton
-Indigo Milk Caps
-Sheathed Woodtufts
-Magenta coral fungi
-Bleeding tooth fungi
+trichophyton
+indigo Milk Caps
+sheathed Woodtufts
+coral fungi
+bleeding tooth fungi
 mildew
 morels
 salty mushroom

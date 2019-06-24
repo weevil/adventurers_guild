@@ -192,11 +192,12 @@ class Character:
         animalCorpusFO = io.open("text_corpus/animal_corpus.txt", encoding="utf-8")
         text = animalCorpusFO.read()
         text_model = markovify.NewlineText(text)
-        for i in range(4):
-            try:
-                animalDescription += text_model.make_sentence(tries=100) + " "
-            except TypeError:
-                animalDescription += "It hunts daily for food. "
+        try:
+            animalDescription += text_model.make_short_sentence(140, tries=100) + " "
+            animalDescription += text_model.make_sentence(tries=100) + " "
+            animalDescription += text_model.make_sentence(tries=100) + " "
+        except TypeError:
+            animalDescription += "It hunts daily for food. "
         animalCorpusFO.close()
         return animalDescription
 
@@ -217,6 +218,7 @@ class Character:
         description = self.generateAnimalDescription()
         animalType = adjective + " " + animalType
         animalType = self.addAorAn(animalType)
+        animalType = animalType.capitalize()
         self.kind = "Animal"
         self.name = animalName
         self.description =  animalType + ". " + description
